@@ -1,0 +1,2778 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>أسرار البيان | خدمات الأفراد والمؤسسات</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(145deg, #f6f9fc 0%, #eef2f7 100%);
+            color: #1a2c3e;
+            line-height: 1.5;
+            transition: background 0.3s ease;
+        }
+        ::-webkit-scrollbar { width:8px; }
+        ::-webkit-scrollbar-track { background:#e2e8f0; border-radius:10px; }
+        ::-webkit-scrollbar-thumb { background:#9aaebf; border-radius:10px; }
+        .container { max-width:1300px; margin:0 auto; padding:0 24px; }
+        .header {
+            background:#0b2b3b;
+            backdrop-filter:blur(2px);
+            box-shadow:0 12px 28px -8px rgba(0,0,0,0.12);
+            position:sticky;
+            top:0;
+            z-index:100;
+            border-bottom:3px solid #eeb76b;
+            transition: background 0.3s ease;
+        }
+        .nav-wrapper {
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:18px 0;
+            flex-wrap:wrap;
+        }
+        .logo h1 {
+            font-size:1.8rem;
+            font-weight:800;
+            background:linear-gradient(135deg, #FFF9E6, #FFE3B5);
+            background-clip:text;
+            -webkit-background-clip:text;
+            color:transparent;
+        }
+        .logo span { font-size:0.9rem; color:#eeb76b; font-weight:500; display:block; }
+        .nav-links {
+            display:flex;
+            gap:20px;
+            align-items:center;
+            flex-wrap:wrap;
+        }
+        .nav-links a, .nav-links .nav-btn {
+            color:#f0f3f8;
+            text-decoration:none;
+            font-weight:600;
+            transition:0.2s;
+            cursor:pointer;
+            background:none;
+            border:none;
+            font-family:'Cairo';
+            font-size:1rem;
+            padding:6px 12px;
+            border-radius:30px;
+        }
+        .nav-links a:hover, .nav-links .nav-btn:hover { color:#f9c270; background:rgba(255,255,255,0.05); }
+        .btn-outline-light {
+            background:transparent;
+            border:2px solid #f9c270;
+            padding:6px 20px;
+            border-radius:40px;
+            color:#f9c270;
+            font-weight:700;
+            cursor:pointer;
+        }
+        .btn-outline-light:hover { background:#f9c270; color:#0b2b3b; }
+        .hero {
+            background:linear-gradient(120deg, #123d4e 0%, #1c5a6f 100%);
+            border-radius:0 0 48px 48px;
+            margin-bottom:60px;
+            padding:60px 0 70px;
+            color:white;
+            position:relative;
+            overflow: hidden;
+            transition: background 0.3s ease;
+        }
+        .hero-grid {
+            display:flex;
+            flex-wrap:wrap;
+            align-items:center;
+            justify-content:space-between;
+            gap:40px;
+        }
+        .hero-text {
+            flex: 1 1 50%;
+            min-width: 280px;
+        }
+        .moving-text-container {
+            overflow: hidden;
+            width: 100%;
+            white-space: nowrap;
+            position: relative;
+        }
+        .moving-text {
+            display: inline-block;
+            animation: scrollRightToLeft 25s linear infinite;
+            padding-left: 100%;
+        }
+        @keyframes scrollRightToLeft {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        .hero-text h2 {
+            font-size: 2.6rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            display: inline-block;
+            margin-left: 40px;
+        }
+        .hero-text p {
+            font-size: 1.2rem;
+            display: inline-block;
+            margin-left: 40px;
+        }
+        .hero-text .btn-primary {
+            margin-top: 25px;
+            display: inline-block;
+            white-space: normal;
+        }
+        .btn-primary {
+            background:#eeb76b;
+            border:none;
+            padding:14px 38px;
+            border-radius:44px;
+            font-weight:800;
+            font-size:1.1rem;
+            color:#0b2b3b;
+            cursor:pointer;
+            transition:0.25s;
+        }
+        .btn-primary:hover { background:#ffcf8a; transform:translateY(-3px); }
+        .section-title {
+            text-align:center;
+            font-size:2rem;
+            font-weight:800;
+            margin:50px 0 30px;
+        }
+        .section-title:after {
+            content:'';
+            width:70px;
+            height:4px;
+            background:#eeb76b;
+            display:block;
+            margin:12px auto 0;
+            border-radius:4px;
+        }
+        .services-grid {
+            display:grid;
+            grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+            gap:32px;
+            margin:40px 0;
+        }
+        .service-card {
+            background:white;
+            border-radius:32px;
+            padding:28px 20px;
+            transition:0.3s ease;
+            box-shadow:0 10px 20px rgba(0,0,0,0.05);
+            text-align:center;
+            border:1px solid rgba(238,183,107,0.3);
+            cursor:pointer;
+        }
+        .service-card:hover { transform:translateY(-8px); border-color:#eeb76b; }
+        .service-icon { font-size:3rem; color:#1c5a6f; margin-bottom:18px; }
+        .service-btn {
+            background:#f1f5f9;
+            border:none;
+            padding:8px 20px;
+            border-radius:50px;
+            font-weight:600;
+            cursor:pointer;
+            margin-top:12px;
+        }
+        .service-btn:hover { background:#eeb76b; }
+        .modal {
+            display:none;
+            position:fixed;
+            top:0; left:0;
+            width:100%; height:100%;
+            background:rgba(11,43,59,0.85);
+            backdrop-filter:blur(10px);
+            align-items:center;
+            justify-content:center;
+            z-index:1000;
+            transition: background 0.3s ease;
+        }
+        .modal-card {
+            background:#fff;
+            max-width:500px;
+            width:90%;
+            border-radius:48px;
+            padding:32px 28px;
+            text-align:center;
+            position:relative;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        .modal-card input, .modal-card select, .modal-card textarea {
+            width:100%;
+            padding:14px 20px;
+            margin:12px 0;
+            border:1px solid #cfdfe9;
+            border-radius:60px;
+            font-family:'Cairo';
+            font-size:1rem;
+        }
+        .modal-card button {
+            background:#1c5a6f;
+            color:white;
+            border:none;
+            padding:12px;
+            width:100%;
+            border-radius:60px;
+            font-weight:bold;
+            margin-top:12px;
+            cursor:pointer;
+        }
+        .close-modal {
+            position:absolute;
+            left:20px;
+            top:20px;
+            font-size:28px;
+            cursor:pointer;
+            color:#8aaec0;
+        }
+        .toggle-auth {
+            margin-top:18px;
+            color:#1c5a6f;
+            font-weight:600;
+            cursor:pointer;
+        }
+        .dashboard-area, .admin-panel {
+            background:white;
+            border-radius:36px;
+            padding:30px;
+            margin:40px 0;
+            box-shadow:0 12px 32px rgba(0,0,0,0.08);
+            border-right:6px solid #eeb76b;
+            transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+        .profile-header {
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            flex-wrap:wrap;
+            border-bottom:2px dashed #e2edf2;
+            padding-bottom:20px;
+            margin-bottom:25px;
+        }
+        .greeting { font-size:1.5rem; font-weight:700; }
+        .logout-btn, .back-btn, .settings-btn {
+            background:#f1f5f9;
+            border:none;
+            padding:8px 24px;
+            border-radius:60px;
+            font-weight:600;
+            cursor:pointer;
+            margin-right:10px;
+        }
+        .settings-btn { background:#eeb76b; color:#0b2b3b; }
+        .back-btn { background:#eeb76b; color:#0b2b3b; }
+        .private-info {
+            background:#fefaf2;
+            padding:20px;
+            border-radius:28px;
+            margin-top:15px;
+            transition: background 0.3s ease;
+        }
+        .private-note {
+            background:#eef2fa;
+            padding:14px;
+            border-radius:28px;
+            font-size:0.85rem;
+        }
+        .users-table, .requests-table, .messages-table, .sent-messages-table {
+            width:100%;
+            border-collapse:collapse;
+            margin-top:20px;
+        }
+        .users-table th, .users-table td,
+        .requests-table th, .requests-table td,
+        .messages-table th, .messages-table td,
+        .sent-messages-table th, .sent-messages-table td {
+            border:1px solid #dee2e6;
+            padding:12px;
+            text-align:center;
+        }
+        .users-table th, .requests-table th, .messages-table th, .sent-messages-table th { background:#0b2b3b; color:white; }
+        .delete-user-btn, .reset-pwd-btn, .status-btn, .edit-btn, .print-btn, .view-btn, .cancel-btn, .msg-btn, .resend-btn, .download-btn {
+            background:#c0392b;
+            color:white;
+            border:none;
+            padding:6px 12px;
+            border-radius:40px;
+            cursor:pointer;
+            margin:0 4px;
+            font-size:0.8rem;
+            display:inline-block;
+        }
+        .reset-pwd-btn { background:#f39c12; }
+        .status-btn { background:#2980b9; }
+        .edit-btn { background:#27ae60; }
+        .print-btn { background:#8e44ad; }
+        .view-btn { background:#2c3e50; }
+        .cancel-btn { background:#c0392b; }
+        .msg-btn { background:#1abc9c; }
+        .resend-btn { background:#27ae60; }
+        .download-btn { background:#2980b9; }
+        .badge-owner {
+            background:#f39c12;
+            color:#2c3e50;
+            padding:4px 12px;
+            border-radius:50px;
+            font-size:0.75rem;
+            font-weight:bold;
+        }
+        .toast-msg {
+            position:fixed;
+            bottom:30px;
+            left:30px;
+            background:#0b2b3b;
+            color:#ffefcf;
+            padding:12px 28px;
+            border-radius:50px;
+            z-index:1200;
+        }
+        .hidden { display:none; }
+        .flex-btns { display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+        .subservices-container {
+            background:white;
+            border-radius:36px;
+            padding:30px;
+            margin:40px 0;
+            box-shadow:0 12px 32px rgba(0,0,0,0.08);
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        .subservice-item {
+            background:#f9f9fc;
+            border-radius:28px;
+            padding:20px;
+            margin-bottom:20px;
+            cursor:pointer;
+            transition:0.2s;
+            border:1px solid #e2e8f0;
+        }
+        .subservice-item:hover {
+            background:#fff5e6;
+            border-color:#eeb76b;
+            transform:translateX(-5px);
+        }
+        .request-form {
+            background:#fefaf2;
+            border-radius:28px;
+            padding:25px;
+            margin-top:20px;
+        }
+        .form-group { margin-bottom:20px; }
+        .form-group label { display:block; margin-bottom:8px; font-weight:600; }
+        .form-group input, .form-group select, .form-group textarea {
+            width:100%;
+            padding:12px 16px;
+            border-radius:28px;
+            border:1px solid #cfdfe9;
+            font-family:'Cairo';
+        }
+        .form-group input[type="file"] {
+            padding:8px;
+            border:1px dashed #cfdfe9;
+            background:#fafafa;
+        }
+        .submit-request {
+            background:#1c5a6f;
+            color:white;
+            padding:12px 24px;
+            border-radius:40px;
+            border:none;
+            font-weight:bold;
+            cursor:pointer;
+            width:100%;
+        }
+        .testimonials-section {
+            background:white;
+            border-radius:36px;
+            padding:30px;
+            margin:40px 0;
+            box-shadow:0 12px 32px rgba(0,0,0,0.08);
+            border-right:6px solid #eeb76b;
+            transition: background 0.3s ease, border-color 0.3s ease;
+        }
+        .testimonial-item {
+            background:#f9f9fc;
+            border-radius:28px;
+            padding:20px;
+            margin-bottom:20px;
+            border:1px solid #e2e8f0;
+        }
+        .testimonial-item .rating { color:#f1c40f; font-size:1.2rem; margin-bottom:6px; }
+        .testimonial-item .testimonial-text { font-size:1rem; margin:8px 0; }
+        .testimonial-item .testimonial-meta { font-size:0.85rem; color:#6c7a89; }
+        .testimonial-item .delete-testimonial {
+            background:#c0392b;
+            color:white;
+            border:none;
+            padding:4px 12px;
+            border-radius:40px;
+            cursor:pointer;
+            font-size:0.75rem;
+            float:left;
+            margin-top:8px;
+        }
+        .add-testimonial-form {
+            background:#fefaf2;
+            border-radius:28px;
+            padding:25px;
+            margin-top:20px;
+        }
+        .add-testimonial-form .rating-input {
+            display:flex;
+            gap:8px;
+            font-size:2rem;
+            cursor:pointer;
+            direction:ltr;
+            justify-content:flex-start;
+        }
+        .add-testimonial-form .rating-input span {
+            color:#d5dbe0;
+            transition:0.2s;
+        }
+        .add-testimonial-form .rating-input span.active { color:#f1c40f; }
+        .add-testimonial-form .rating-input span:hover { color:#f39c12; }
+        .notification-badge {
+            background:#e74c3c;
+            color:white;
+            border-radius:50%;
+            padding:2px 8px;
+            font-size:0.7rem;
+            margin-right:4px;
+        }
+        .status-pending { color:#f39c12; font-weight:bold; }
+        .status-completed { color:#27ae60; font-weight:bold; }
+        .status-cancelled { color:#e74c3c; font-weight:bold; }
+        .msg-unread { background:#fef9e7; font-weight:bold; }
+        .attachment-link { color:#2980b9; text-decoration:underline; cursor:pointer; margin:0 4px; }
+        .attachment-link:hover { color:#1abc9c; }
+
+        /* --- أنماط حقول كلمة المرور مع أيقونة إظهار/إخفاء --- */
+        .password-wrapper {
+            position: relative;
+            width: 100%;
+            margin: 12px 0;
+        }
+        .password-wrapper input {
+            width: 100%;
+            padding: 14px 20px;
+            padding-left: 50px; /* مساحة للأيقونة على اليسار في RTL */
+            border-radius: 60px;
+            border: 1px solid #cfdfe9;
+            font-family: 'Cairo';
+            font-size: 1rem;
+        }
+        .password-wrapper .toggle-pwd {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #8aaec0;
+            font-size: 1.2rem;
+            z-index: 5;
+        }
+        .password-wrapper .toggle-pwd:hover {
+            color: #0b2b3b;
+        }
+
+        /* إعدادات النافذة المنبثقة */
+        .settings-modal {
+            position:fixed;
+            top:0; left:0; width:100%; height:100%;
+            background:rgba(0,0,0,0.6);
+            z-index:9999;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+        .settings-modal-content {
+            background:white;
+            border-radius:32px;
+            padding:30px;
+            max-width:600px;
+            width:95%;
+            max-height:80vh;
+            overflow-y:auto;
+            direction:rtl;
+        }
+        .settings-modal-content .form-group { margin-bottom:15px; }
+        .settings-modal-content .form-group label { display:block; margin-bottom:5px; font-weight:600; }
+        .settings-modal-content input, .settings-modal-content select {
+            width:100%;
+            padding:12px 16px;
+            border-radius:28px;
+            border:1px solid #cfdfe9;
+            font-family:'Cairo';
+        }
+        .settings-modal-content .btn-group {
+            display:flex;
+            gap:10px;
+            margin-top:15px;
+            flex-wrap:wrap;
+        }
+        .settings-modal-content .btn-group button {
+            flex:1;
+            padding:10px;
+            border-radius:40px;
+            border:none;
+            font-weight:bold;
+            cursor:pointer;
+            min-width:100px;
+        }
+        .settings-modal-content .btn-group .save-btn { background:#1c5a6f; color:white; }
+        .settings-modal-content .btn-group .cancel-btn { background:#e2e8f0; color:#333; }
+        .settings-modal-content .note {
+            background:#fef9e7;
+            padding:8px 12px;
+            border-radius:20px;
+            font-size:0.85rem;
+            color:#7f8c8d;
+            margin-bottom:15px;
+        }
+        .color-picker {
+            display:flex;
+            gap:10px;
+            flex-wrap:wrap;
+            margin:8px 0;
+        }
+        .color-picker span {
+            width:35px;
+            height:35px;
+            border-radius:50%;
+            cursor:pointer;
+            border:2px solid transparent;
+            transition:0.2s;
+        }
+        .color-picker span:hover, .color-picker span.active {
+            border-color:#0b2b3b;
+            transform:scale(1.1);
+        }
+        .theme-preview {
+            border:1px dashed #ccc;
+            padding:10px;
+            border-radius:20px;
+            margin-top:10px;
+            text-align:center;
+            background:#f9f9fc;
+        }
+        .theme-preview img {
+            max-width:100%;
+            max-height:150px;
+            border-radius:12px;
+        }
+
+        /* نافذة الرسائل المنبثقة */
+        .messages-popup {
+            position:fixed;
+            top:0; left:0; width:100%; height:100%;
+            background:rgba(0,0,0,0.6);
+            z-index:10000;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+        .messages-popup-content {
+            background:white;
+            border-radius:32px;
+            padding:30px;
+            max-width:700px;
+            width:95%;
+            max-height:80vh;
+            overflow-y:auto;
+            direction:rtl;
+        }
+        .messages-popup-content .message-item {
+            background:#f9f9fc;
+            border-radius:16px;
+            padding:15px;
+            margin-bottom:12px;
+            border:1px solid #e2e8f0;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            flex-wrap:wrap;
+        }
+        .messages-popup-content .message-item.unread {
+            background:#fef9e7;
+            border-color:#f1c40f;
+        }
+        .messages-popup-content .message-item .msg-info {
+            flex:1;
+            min-width:150px;
+        }
+        .messages-popup-content .message-item .msg-info .msg-subject {
+            font-weight:bold;
+            font-size:1rem;
+        }
+        .messages-popup-content .message-item .msg-info .msg-meta {
+            font-size:0.85rem;
+            color:#6c7a89;
+        }
+        .messages-popup-content .message-item .msg-actions {
+            display:flex;
+            gap:8px;
+        }
+        .messages-popup-content .message-item .msg-actions button {
+            padding:5px 12px;
+            border-radius:30px;
+            border:none;
+            cursor:pointer;
+            font-weight:600;
+        }
+        .messages-popup-content .message-item .msg-actions .view-msg-btn {
+            background:#2c3e50;
+            color:white;
+        }
+        .messages-popup-content .message-item .msg-actions .view-msg-btn:hover {
+            background:#1a252f;
+        }
+        .messages-popup-content .popup-header {
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            border-bottom:2px solid #e2edf2;
+            padding-bottom:15px;
+            margin-bottom:20px;
+        }
+        .messages-popup-content .popup-header h3 {
+            margin:0;
+        }
+        .messages-popup-content .popup-header .close-popup {
+            background:#e2e8f0;
+            border:none;
+            padding:8px 16px;
+            border-radius:40px;
+            cursor:pointer;
+            font-weight:bold;
+            color:#333;
+        }
+        .messages-popup-content .popup-header .close-popup:hover {
+            background:#c0392b;
+            color:white;
+        }
+
+        /* تفاصيل الرسالة داخل النافذة */
+        .msg-detail-view {
+            margin-top:15px;
+        }
+        .msg-detail-view .back-to-list {
+            background:#eeb76b;
+            border:none;
+            padding:8px 20px;
+            border-radius:40px;
+            cursor:pointer;
+            font-weight:bold;
+            margin-bottom:15px;
+        }
+        .msg-detail-view .back-to-list:hover {
+            background:#ffcf8a;
+        }
+        .msg-detail-view .detail-body {
+            background:#f9f9fc;
+            padding:15px;
+            border-radius:16px;
+            white-space:pre-wrap;
+        }
+        .msg-detail-view .detail-attachments {
+            margin-top:15px;
+        }
+
+        @media (max-width:750px) {
+            .nav-wrapper { flex-direction:column; gap:16px; }
+            .hero-text h2 { font-size:1.9rem; }
+            .hero-text p { font-size:1rem; }
+            .moving-text { animation-duration: 18s; }
+            .settings-modal-content { padding:20px; }
+            .messages-popup-content { padding:20px; }
+            .messages-popup-content .message-item { flex-direction:column; align-items:stretch; }
+            .messages-popup-content .message-item .msg-actions { margin-top:10px; }
+        }
+        @media print {
+            .no-print { display:none !important; }
+            .print-content { direction:rtl; font-family:'Cairo', sans-serif; padding:20px; }
+            .print-content table { width:100%; border-collapse:collapse; }
+            .print-content table th, .print-content table td { border:1px solid #333; padding:8px; text-align:center; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header no-print" id="mainHeader">
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="logo">
+                <h1>مكتب أسرار البيان</h1>
+                <span>للخدمات الإلكترونية العامة</span>
+            </div>
+            <div class="nav-links">
+                <a id="navHome">الرئيسية</a>
+                <a id="navServicesLink">خدماتنا</a>
+                <a id="navAccountBtn">حسابي</a>
+                <a id="showLoginModalBtn" class="btn-outline-light">تسجيل الدخول</a>
+                <a id="showRegisterModalBtn" class="btn-outline-light">إنشاء حساب</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="hero no-print" id="mainHero">
+    <div class="container hero-grid">
+        <div class="hero-text">
+            <div class="moving-text-container">
+                <div class="moving-text">
+                    <h2>حلول إلكترونية شاملة للأفراد والمؤسسات</h2>
+                    <p>خدمات متكاملة.</p>
+                </div>
+            </div>
+            <button class="btn-primary" id="heroRequestBtn">اطلب الخدمة الآن <i class="fas fa-arrow-left"></i></button>
+        </div>
+        <div><i class="fas fa-shield-alt" style="font-size:130px; opacity:0.6; color:#ffda9e;"></i></div>
+    </div>
+</section>
+
+<div class="container">
+    <!-- الخدمات الرئيسية -->
+    <div id="servicesSection" class="no-print">
+        <div class="section-title">باقات الخدمات الإلكترونية المتطورة</div>
+        <div class="services-grid">
+            <div class="service-card" data-service-type="individuals">
+                <div class="service-icon"><i class="fas fa-users"></i></div>
+                <h3>خدمات الأفراد والمؤسسات</h3>
+                <p>حلول رقمية شاملة للأفراد والشركات والجهات الحكومية.</p>
+                <button class="service-btn request-main-service" data-service="خدمات الأفراد والمؤسسات">طلب الخدمة</button>
+            </div>
+            <div class="service-card" data-service-type="insurance">
+                <div class="service-icon"><i class="fas fa-shield-virus"></i></div>
+                <h3>جميع أنواع التأمينات</h3>
+                <p>تأمينات صحية، مركبات، سفر، تقاعد، وممتلكات بشراكة مع كبرى شركات التأمين.</p>
+                <button class="service-btn request-main-service" data-service="جميع أنواع التأمينات">طلب الخدمة</button>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-envelope-open-text"></i></div>
+                <h3>مراسلات رسمية</h3>
+                <button class="service-btn request-service" data-service="مراسلات رسمية">طلب الخدمة</button>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                <h3>تحليلات البيانات</h3>
+                <button class="service-btn request-service" data-service="تحليلات البيانات">طلب الخدمة</button>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-id-card"></i></div>
+                <h3>الهوية الرقمية</h3>
+                <button class="service-btn request-service" data-service="الهوية الرقمية">طلب الخدمة</button>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-globe"></i></div>
+                <h3>تطوير المواقع الإلكترونية</h3>
+                <button class="service-btn request-service" data-service="تطوير المواقع الإلكترونية">طلب الخدمة</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- الخدمات الفرعية -->
+    <div id="subServicesPanel" class="subservices-container hidden no-print">
+        <div class="profile-header">
+            <div class="greeting" id="subServiceTitle">خدمات الأفراد والمؤسسات</div>
+            <button class="back-btn" id="backToMainServicesBtn"><i class="fas fa-arrow-right"></i> رجوع إلى الخدمات الرئيسية</button>
+        </div>
+        <div id="subServicesList"></div>
+        <div id="requestFormContainer" class="hidden request-form"></div>
+    </div>
+
+    <!-- لوحة المستخدم -->
+    <div id="dashboardPanel" class="dashboard-area hidden">
+        <div class="profile-header no-print">
+            <div class="greeting"><i class="fas fa-user-secret"></i> مرحباً، <span id="dashboardUserName">العميل</span></div>
+            <div class="flex-btns">
+                <button class="nav-btn" id="notificationBtnUser" style="position:relative; color:#f1c40f; background:#f1f5f9; border-radius:40px; padding:8px 16px;">
+                    <i class="fas fa-bell" style="color:#f1c40f;"></i>
+                    <span id="notificationCountUser" class="notification-badge" style="display:none;">0</span>
+                </button>
+                <button class="settings-btn" id="settingsBtnUser"><i class="fas fa-cog"></i> إعدادات</button>
+                <button class="back-btn" id="backBtnDashboard"><i class="fas fa-arrow-right"></i> رجوع</button>
+                <button class="logout-btn" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> تسجيل خروج</button>
+            </div>
+        </div>
+        <div class="private-info no-print">
+            <div class="private-note"><i class="fas fa-shield-alt"></i> خصوصية تامة: بياناتك غير مرئية لأي شخص آخر.</div>
+            <p><i class="fas fa-envelope"></i> <strong>البريد:</strong> <span id="privateEmail">---</span></p>
+            <p><i class="fas fa-user"></i> <strong>الاسم:</strong> <span id="privateName">---</span></p>
+            <p><i class="fas fa-calendar-alt"></i> <strong>تاريخ التسجيل:</strong> <span id="privateRegDate">---</span></p>
+            <p><i class="fas fa-fingerprint"></i> <strong>المعرف المشفر:</strong> <span id="privateUid">••••</span></p>
+        </div>
+        <div class="service-request no-print">
+            <h4>طلب خدمة جديدة</h4>
+            <div class="request-grid">
+                <button class="req-btn quick-service" data-service="خدمات الأفراد والمؤسسات">خدمات الأفراد</button>
+                <button class="req-btn quick-service" data-service="جميع أنواع التأمينات">طلب تأمين</button>
+            </div>
+        </div>
+
+        <!-- طلباتي -->
+        <div style="margin-top:30px;">
+            <h4><i class="fas fa-list-ul"></i> طلباتي</h4>
+            <div id="userRequestsContainer"><p>لا توجد طلبات حتى الآن.</p></div>
+        </div>
+
+        <!-- الرسائل (تم إزالة عرضها من هنا، ستظهر في النافذة المنبثقة) -->
+        <div style="margin-top:30px;">
+            <h4><i class="fas fa-envelope"></i> رسائلي <span id="toggleMessagesBtn" style="cursor:pointer; font-size:0.9rem; background:#eeb76b; padding:4px 12px; border-radius:30px; color:#0b2b3b; margin-right:10px;">عرض</span></h4>
+            <div id="userMessagesContainer" style="display:none;"><p>لا توجد رسائل.</p></div>
+        </div>
+    </div>
+
+    <!-- لوحة المالك -->
+    <div id="adminPanel" class="admin-panel hidden">
+        <div class="profile-header no-print">
+            <div class="greeting"><i class="fas fa-crown"></i> لوحة المالك: <span id="ownerName">mohamed siddig</span></div>
+            <div class="flex-btns">
+                <button class="nav-btn" id="notificationBtnAdmin" style="position:relative; color:#f1c40f; background:#f1f5f9; border-radius:40px; padding:8px 16px;">
+                    <i class="fas fa-bell" style="color:#f1c40f;"></i>
+                    <span id="notificationCountAdmin" class="notification-badge" style="display:none;">0</span>
+                </button>
+                <button class="settings-btn" id="settingsBtnAdmin"><i class="fas fa-cog"></i> إعدادات</button>
+                <button class="back-btn" id="backBtnAdmin"><i class="fas fa-arrow-right"></i> رجوع</button>
+                <button class="logout-btn" id="adminLogoutBtn">تسجيل خروج</button>
+            </div>
+        </div>
+        <h3 class="no-print"><i class="fas fa-users-cog"></i> جميع الحسابات المسجلة</h3>
+        <div style="overflow-x:auto;" class="no-print">
+            <table class="users-table" id="usersTable">
+                <thead><tr><th>البريد الإلكتروني</th><th>الاسم</th><th>تاريخ التسجيل</th><th>المعرف</th><th>الحالة</th><th>إجراءات</th></tr></thead>
+                <tbody id="usersTableBody"></tbody>
+            </table>
+        </div>
+        <div class="private-note no-print" style="margin-top:20px;"><i class="fas fa-gavel"></i> يمكنك إزالة أي حساب يسيء الاستخدام أو إعادة تعيين كلمة المرور.</div>
+
+        <!-- جميع الطلبات -->
+        <div style="margin-top:40px;">
+            <h3><i class="fas fa-tasks"></i> جميع طلبات العملاء</h3>
+            <div id="adminRequestsContainer"><p>لا توجد طلبات بعد.</p></div>
+        </div>
+
+        <!-- الرسائل المرسلة -->
+        <div style="margin-top:40px;">
+            <h3><i class="fas fa-paper-plane"></i> الرسائل المرسلة</h3>
+            <div id="adminSentMessagesContainer"><p>لا توجد رسائل مرسلة.</p></div>
+        </div>
+    </div>
+
+    <!-- آراء العملاء -->
+    <div class="testimonials-section no-print" id="testimonialsSection">
+        <div class="section-title" style="margin-top:0;">آراء العملاء</div>
+        <div class="add-testimonial-form">
+            <h4>أضف رأيك</h4>
+            <div class="form-group">
+                <label>الاسم</label>
+                <input type="text" id="testimonialName" placeholder="اسمك الكريم" required>
+            </div>
+            <div class="form-group">
+                <label>البريد الإلكتروني (اختياري)</label>
+                <input type="email" id="testimonialEmail" placeholder="example@mail.com">
+            </div>
+            <div class="form-group">
+                <label>التقييم</label>
+                <div class="rating-input" id="ratingStars">
+                    <span data-value="1">☆</span><span data-value="2">☆</span><span data-value="3">☆</span><span data-value="4">☆</span><span data-value="5">☆</span>
+                </div>
+                <input type="hidden" id="testimonialRating" value="0">
+            </div>
+            <div class="form-group">
+                <label>التعليق</label>
+                <textarea id="testimonialText" rows="3" placeholder="شاركنا تجربتك مع خدماتنا..." required></textarea>
+            </div>
+            <button class="submit-request" id="addTestimonialBtn"><i class="fas fa-pen"></i> أضف رأيك</button>
+        </div>
+        <div id="testimonialsList" style="margin-top:25px;"></div>
+    </div>
+</div>
+
+<!-- نوافذ المصادقة -->
+<div id="authModal" class="modal no-print">
+    <div class="modal-card" id="authModalCard">
+        <span class="close-modal" id="closeModalBtn">&times;</span>
+        <div id="modalLoginForm">
+            <h3>تسجيل الدخول</h3>
+            <input type="email" id="loginEmail" placeholder="البريد الإلكتروني" required>
+            <div class="password-wrapper">
+                <input type="password" id="loginPassword" placeholder="كلمة المرور" required>
+                <i class="fas fa-eye toggle-pwd" id="toggleLoginPwd"></i>
+            </div>
+            <button id="loginBtn">تسجيل الدخول</button>
+            <div class="toggle-auth" id="switchToRegister">ليس لديك حساب؟ إنشاء حساب</div>
+            <div class="forgot-pwd" id="forgotPasswordLink">نسيت كلمة المرور؟</div>
+        </div>
+        <div id="modalRegisterForm" style="display:none;">
+            <h3>إنشاء حساب جديد</h3>
+            <input type="text" id="regName" placeholder="الاسم الكامل" required>
+            <input type="email" id="regEmail" placeholder="البريد الإلكتروني" required>
+            <div class="password-wrapper">
+                <input type="password" id="regPassword" placeholder="كلمة المرور" required>
+                <i class="fas fa-eye toggle-pwd" id="toggleRegPwd"></i>
+            </div>
+            <div class="password-wrapper">
+                <input type="password" id="regConfirm" placeholder="تأكيد كلمة المرور" required>
+                <i class="fas fa-eye toggle-pwd" id="toggleRegConfirmPwd"></i>
+            </div>
+            <button id="doRegisterBtn">إنشاء حساب</button>
+            <div class="toggle-auth" id="switchToLogin">لدي حساب بالفعل</div>
+        </div>
+        <div id="modalResetPwd" style="display:none;">
+            <h3>إعادة تعيين كلمة المرور</h3>
+            <p style="color:#666; font-size:0.9rem;">سيتم إرسال كلمة مرور جديدة إلى بريدك الإلكتروني.</p>
+            <input type="email" id="resetEmail" placeholder="بريدك الإلكتروني" required>
+            <div id="resetErrorMsg" style="color:#c0392b; margin-top:10px; font-weight:bold; display:none;"></div>
+            <button id="sendResetBtn">إرسال كلمة مرور جديدة</button>
+            <div class="toggle-auth" id="backToLoginFromReset">عودة لتسجيل الدخول</div>
+        </div>
+    </div>
+</div>
+
+<!-- نافذة الإعدادات (ستظهر عبر JavaScript) -->
+<div id="settingsModalContainer"></div>
+
+<!-- نافذة الرسائل المنبثقة -->
+<div id="messagesPopupContainer"></div>
+
+<script>
+    // ---------- تكوين EmailJS ----------
+    const EMAILJS_PUBLIC_KEY = "0kPfkgswrbWPtIpeQ";
+    const EMAILJS_SERVICE_ID = "service_y04kr7c";
+    const EMAILJS_TEMPLATE_ID = "template_t41ggf9";
+    const isEmailJSConfigured = (EMAILJS_PUBLIC_KEY && EMAILJS_SERVICE_ID && EMAILJS_TEMPLATE_ID && EMAILJS_PUBLIC_KEY !== "YOUR_PUBLIC_KEY_HERE");
+    if (isEmailJSConfigured) emailjs.init(EMAILJS_PUBLIC_KEY);
+
+    // ---------- أدوات مساعدة ----------
+    function generateId() { return Date.now().toString(36) + Math.random().toString(36).substr(2,5); }
+    function showToast(msg, isErr = false) {
+        let t = document.createElement('div');
+        t.className = 'toast-msg';
+        t.innerText = msg;
+        if (isErr) t.style.background = "#a12a2a";
+        document.body.appendChild(t);
+        setTimeout(() => t.remove(), 3500);
+    }
+
+    function closeRequestDetails() {
+        const modal = document.getElementById('requestDetailsModal');
+        if (modal) modal.remove();
+    }
+
+    function readFileAsBase64(file) {
+        return new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.onload = () => resolve(reader.result);
+            reader.onerror = reject;
+            reader.readAsDataURL(file);
+        });
+    }
+
+    // ---------- دالة تبديل إظهار/إخفاء كلمة المرور ----------
+    function setupToggle(inputId, iconId) {
+        const input = document.getElementById(inputId);
+        const icon = document.getElementById(iconId);
+        if (!input || !icon) return;
+        icon.addEventListener('click', function() {
+            const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
+            input.setAttribute('type', type);
+            this.classList.toggle('fa-eye');
+            this.classList.toggle('fa-eye-slash');
+        });
+    }
+
+    // ---------- إدارة المستخدمين ----------
+    const OWNER_EMAIL = "mohamedsiddigkaps30@gmail.com";
+    let currentSession = { email: null, verified: false, isOwner: false };
+
+    function loadUsers() { let u = localStorage.getItem('asrar_users'); return u ? JSON.parse(u) : []; }
+    function saveUsers(users) { localStorage.setItem('asrar_users', JSON.stringify(users)); }
+
+    function initOwner() {
+        let users = loadUsers();
+        if (!users.find(u => u.email === OWNER_EMAIL)) {
+            users.push({
+                email: OWNER_EMAIL,
+                password: "Owner@2026",
+                name: "المالك",
+                regDate: new Date().toLocaleString('ar-SA'),
+                userId: "OWNER-MASTER",
+                isOwner: true,
+                verified: true
+            });
+        } else {
+            let owner = users.find(u => u.email === OWNER_EMAIL);
+            owner.isOwner = true;
+            owner.verified = true;
+        }
+        saveUsers(users);
+    }
+    initOwner();
+
+    function registerUser(name, email, password) {
+        let users = loadUsers();
+        if (users.find(u => u.email === email)) return { success: false, msg: 'البريد مسجل مسبقاً' };
+        if (password.length < 5) return { success: false, msg: 'كلمة المرور يجب أن تكون 5 أحرف على الأقل' };
+        users.push({
+            email,
+            password,
+            name: name || email.split('@')[0],
+            regDate: new Date().toLocaleString('ar-SA'),
+            userId: 'USR-' + Math.random().toString(36).substring(2,10),
+            verified: true,
+            isOwner: false
+        });
+        saveUsers(users);
+        return { success: true, msg: 'تم إنشاء الحساب بنجاح' };
+    }
+
+    function loginUser(email, password) {
+        let users = loadUsers();
+        let user = users.find(u => u.email === email);
+        if (!user) return { success: false, msg: 'البريد غير مسجل' };
+        if (user.password !== password) return { success: false, msg: 'كلمة المرور غير صحيحة' };
+        currentSession = {
+            email: user.email,
+            verified: true,
+            isOwner: (user.email === OWNER_EMAIL)
+        };
+        return { success: true, msg: `مرحباً ${user.name}` };
+    }
+
+    function resetPassword(email) {
+        let users = loadUsers();
+        let user = users.find(u => u.email === email);
+        if (!user) return { success: false, msg: 'البريد غير مسجل' };
+        const newPassword = Math.random().toString(36).slice(-8);
+        user.password = newPassword;
+        saveUsers(users);
+        sendNewPasswordEmail(email, newPassword);
+        return { success: true, msg: 'تم إرسال كلمة المرور الجديدة إلى بريدك' };
+    }
+
+    async function sendNewPasswordEmail(toEmail, newPassword) {
+        if (!isEmailJSConfigured) {
+            alert(`📧 [تنبيه: لم يتم إعداد EmailJS]\nتم إعادة تعيين كلمة المرور للبريد: ${toEmail}\nكلمة المرور الجديدة: ${newPassword}`);
+            return;
+        }
+        try {
+            const templateParams = {
+                to_email: toEmail,
+                to_name: toEmail.split('@')[0],
+                code: newPassword,
+                purpose: 'إعادة تعيين كلمة المرور',
+                message: `مرحباً،\n\nتم إعادة تعيين كلمة المرور الخاصة بحسابك في مكتب أسرار البيان.\n\nكلمة المرور الجديدة هي: ${newPassword}\n\nيرجى استخدامها لتسجيل الدخول، ويمكنك تغييرها لاحقاً.\n\nمع تحيات فريق أسرار البيان`,
+                from_name: "مكتب أسرار البيان",
+                reply_to: toEmail,
+                subject: "إعادة تعيين كلمة المرور"
+            };
+            await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams);
+            showToast(`✅ تم إرسال كلمة المرور الجديدة إلى ${toEmail}`);
+        } catch (error) {
+            console.error("Reset email failed:", error);
+            alert(`⚠️ لم نتمكن من إرسال البريد تلقائياً.\nكلمة المرور الجديدة للبريد ${toEmail} هي: ${newPassword}\nيرجى حفظها واستخدامها لتسجيل الدخول.`);
+            showToast('تعذر إرسال البريد، لكن تم عرض كلمة المرور الجديدة في التنبيه', true);
+        }
+    }
+
+    // ---------- إدارة الطلبات ----------
+    function loadAllRequests() {
+        let data = localStorage.getItem('asrar_requests');
+        return data ? JSON.parse(data) : [];
+    }
+    function saveAllRequests(requests) {
+        localStorage.setItem('asrar_requests', JSON.stringify(requests));
+    }
+
+    function addRequest(requestData) {
+        const requests = loadAllRequests();
+        const newRequest = {
+            id: generateId(),
+            serviceName: requestData.serviceName,
+            mainCategory: requestData.mainCategory || 'عام',
+            userEmail: requestData.userEmail,
+            timestamp: requestData.timestamp || new Date().toISOString(),
+            fields: requestData.fields || {},
+            attachments: requestData.attachments || [],
+            status: 'pending',
+            adminNote: '',
+            cancelReason: '',
+            readByUser: false,
+            readByAdmin: false
+        };
+        requests.push(newRequest);
+        saveAllRequests(requests);
+        return newRequest;
+    }
+
+    function updateRequest(requestId, updates) {
+        const requests = loadAllRequests();
+        const idx = requests.findIndex(r => r.id === requestId);
+        if (idx === -1) return null;
+        Object.assign(requests[idx], updates);
+        saveAllRequests(requests);
+        return requests[idx];
+    }
+
+    function deleteRequest(requestId) {
+        let requests = loadAllRequests();
+        requests = requests.filter(r => r.id !== requestId);
+        saveAllRequests(requests);
+    }
+
+    function getUserRequests(email) {
+        const all = loadAllRequests();
+        return all.filter(r => r.userEmail === email);
+    }
+
+    function getAllRequests() { return loadAllRequests(); }
+
+    function getUnreadCountForUser(email) {
+        const all = loadAllRequests();
+        return all.filter(r => r.userEmail === email && !r.readByUser).length;
+    }
+    function getUnreadCountForAdmin() {
+        const all = loadAllRequests();
+        return all.filter(r => !r.readByAdmin).length;
+    }
+
+    function markRequestsAsReadForUser(email) {
+        const requests = loadAllRequests();
+        let changed = false;
+        requests.forEach(r => {
+            if (r.userEmail === email && !r.readByUser) { r.readByUser = true; changed = true; }
+        });
+        if (changed) saveAllRequests(requests);
+    }
+    function markRequestsAsReadForAdmin() {
+        const requests = loadAllRequests();
+        let changed = false;
+        requests.forEach(r => {
+            if (!r.readByAdmin) { r.readByAdmin = true; changed = true; }
+        });
+        if (changed) saveAllRequests(requests);
+    }
+
+    // ---------- نظام الرسائل ----------
+    function loadMessages() {
+        let data = localStorage.getItem('asrar_messages');
+        return data ? JSON.parse(data) : [];
+    }
+    function saveMessages(messages) {
+        localStorage.setItem('asrar_messages', JSON.stringify(messages));
+    }
+
+    function sendMessage(from, to, subject, body, attachments = []) {
+        const messages = loadMessages();
+        const newMsg = {
+            id: generateId(),
+            from: from,
+            to: to,
+            subject: subject,
+            body: body,
+            attachments: attachments,
+            timestamp: new Date().toISOString(),
+            read: false,
+            isSent: true
+        };
+        messages.push(newMsg);
+        saveMessages(messages);
+        return newMsg;
+    }
+
+    function getMessagesForUser(email) {
+        const all = loadMessages();
+        return all.filter(m => m.to === email || m.from === email);
+    }
+
+    function getSentMessages(email) {
+        const all = loadMessages();
+        return all.filter(m => m.from === email);
+    }
+
+    function getUnreadMessagesCount(email) {
+        const all = loadMessages();
+        return all.filter(m => m.to === email && !m.read).length;
+    }
+
+    function markMessagesAsRead(email) {
+        const messages = loadMessages();
+        let changed = false;
+        messages.forEach(m => {
+            if (m.to === email && !m.read) { m.read = true; changed = true; }
+        });
+        if (changed) saveMessages(messages);
+    }
+
+    // ---------- عرض الرسائل في لوحة المستخدم (تم استبدالها بالنافذة المنبثقة) ----------
+    function renderUserMessagesInPopup(containerId) {
+        const container = document.getElementById(containerId);
+        if (!container) return;
+        if (!currentSession.verified || currentSession.isOwner) {
+            container.innerHTML = '<p>يرجى تسجيل الدخول كمستخدم عادي.</p>';
+            return;
+        }
+        const messages = loadMessages().filter(m => m.to === currentSession.email);
+        if (messages.length === 0) {
+            container.innerHTML = '<p>لا توجد رسائل.</p>';
+            return;
+        }
+        messages.sort((a,b) => new Date(b.timestamp) - new Date(a.timestamp));
+        let html = '';
+        messages.forEach(msg => {
+            const isRead = msg.read;
+            const rowClass = isRead ? '' : 'unread';
+            const senderDisplay = msg.from === OWNER_EMAIL ? 'فريق مكتب أسرار البيان' : msg.from;
+            html += `
+                <div class="message-item ${rowClass}">
+                    <div class="msg-info">
+                        <div class="msg-subject">${msg.subject}</div>
+                        <div class="msg-meta">من: ${senderDisplay} · ${new Date(msg.timestamp).toLocaleString('ar-SA')}</div>
+                    </div>
+                    <div class="msg-actions">
+                        <button class="view-msg-btn" data-id="${msg.id}">عرض</button>
+                    </div>
+                </div>
+            `;
+        });
+        container.innerHTML = html;
+
+        container.querySelectorAll('.view-msg-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const msgId = this.dataset.id;
+                const messages = loadMessages();
+                const msg = messages.find(m => m.id === msgId);
+                if (!msg) return showToast('الرسالة غير موجودة', true);
+                if (!msg.read) {
+                    msg.read = true;
+                    saveMessages(messages);
+                    updateNotificationBadges();
+                    renderUserMessagesInPopup('messagesListContainer');
+                }
+                showMessageDetailInPopup(msg);
+            });
+        });
+
+        updateNotificationBadges();
+    }
+
+    function showMessageDetailInPopup(msg) {
+        const container = document.getElementById('messagesPopupContent');
+        if (!container) return;
+
+        let attachmentsHtml = '';
+        if (msg.attachments && msg.attachments.length > 0) {
+            attachmentsHtml = '<h4 style="margin-top:15px;">المرفقات</h4><div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:10px;">';
+            msg.attachments.forEach((att) => {
+                const isImage = att.type && att.type.startsWith('image/');
+                if (isImage) {
+                    attachmentsHtml += `<div style="border:1px solid #ddd; border-radius:8px; padding:8px; text-align:center;">
+                        <img src="${att.data}" alt="${att.name}" style="max-width:150px; max-height:150px; border-radius:4px; cursor:pointer;" onclick="window.open('${att.data}','_blank')">
+                        <br><a href="${att.data}" download="${att.name}" class="download-btn" style="font-size:0.8rem; display:inline-block; margin-top:4px; padding:4px 12px; background:#2980b9; color:white; border-radius:20px; text-decoration:none;">تحميل</a>
+                    </div>`;
+                } else {
+                    attachmentsHtml += `<div style="border:1px solid #ddd; border-radius:8px; padding:8px; text-align:center;">
+                        <i class="fas fa-file" style="font-size:2.5rem; color:#2980b9;"></i>
+                        <br><span>${att.name}</span>
+                        <br><a href="${att.data}" download="${att.name}" class="download-btn" style="font-size:0.8rem; display:inline-block; margin-top:4px; padding:4px 12px; background:#2980b9; color:white; border-radius:20px; text-decoration:none;">تحميل</a>
+                    </div>`;
+                }
+            });
+            attachmentsHtml += '</div>';
+        }
+
+        const senderDisplay = msg.from === OWNER_EMAIL ? 'فريق مكتب أسرار البيان' : msg.from;
+
+        container.innerHTML = `
+            <div class="popup-header">
+                <h3>تفاصيل الرسالة</h3>
+                <div>
+                    <button class="back-to-list" id="backToMsgListBtn"><i class="fas fa-arrow-right"></i> رجوع إلى القائمة</button>
+                    <button class="close-popup" id="closeMsgPopupBtn">إغلاق</button>
+                </div>
+            </div>
+            <div class="msg-detail-view">
+                <p><strong>المرسل:</strong> ${senderDisplay}</p>
+                <p><strong>الموضوع:</strong> ${msg.subject}</p>
+                <p><strong>التاريخ:</strong> ${new Date(msg.timestamp).toLocaleString('ar-SA')}</p>
+                <hr>
+                <div class="detail-body">${msg.body}</div>
+                ${attachmentsHtml}
+            </div>
+        `;
+
+        container.querySelector('#backToMsgListBtn').addEventListener('click', function() {
+            showMessagesPopup();
+        });
+        container.querySelector('#closeMsgPopupBtn').addEventListener('click', function() {
+            closeMessagesPopup();
+        });
+    }
+
+    function showMessagesPopup() {
+        closeMessagesPopup();
+
+        const container = document.getElementById('messagesPopupContainer');
+        container.innerHTML = `
+            <div class="messages-popup" id="messagesPopup">
+                <div class="messages-popup-content" id="messagesPopupContent">
+                    <div class="popup-header">
+                        <h3><i class="fas fa-envelope"></i> رسائلي</h3>
+                        <button class="close-popup" id="closeMsgPopupBtn">إغلاق <i class="fas fa-times"></i></button>
+                    </div>
+                    <div id="messagesListContainer"></div>
+                </div>
+            </div>
+        `;
+
+        renderUserMessagesInPopup('messagesListContainer');
+
+        container.querySelector('#closeMsgPopupBtn').addEventListener('click', closeMessagesPopup);
+        container.querySelector('#messagesPopup').addEventListener('click', function(e) {
+            if (e.target === this) closeMessagesPopup();
+        });
+    }
+
+    function closeMessagesPopup() {
+        const container = document.getElementById('messagesPopupContainer');
+        container.innerHTML = '';
+        updateNotificationBadges();
+    }
+
+    document.getElementById('toggleMessagesBtn').addEventListener('click', function() {
+        if (!currentSession.verified) {
+            showToast('يرجى تسجيل الدخول', true);
+            return;
+        }
+        showMessagesPopup();
+    });
+
+    function renderAdminSentMessages() {
+        const container = document.getElementById('adminSentMessagesContainer');
+        if (!currentSession.isOwner) {
+            container.innerHTML = '<p>غير مصرح.</p>';
+            return;
+        }
+        const messages = getSentMessages(OWNER_EMAIL);
+        if (messages.length === 0) {
+            container.innerHTML = '<p>لا توجد رسائل مرسلة.</p>';
+            return;
+        }
+        messages.sort((a,b) => new Date(b.timestamp) - new Date(a.timestamp));
+        let html = `<table class="sent-messages-table">
+            <thead><tr><th>إلى</th><th>الموضوع</th><th>التاريخ</th><th>إجراءات</th></tr></thead><tbody>`;
+        messages.forEach(msg => {
+            html += `<tr>
+                <td>${msg.to}</td>
+                <td>${msg.subject}</td>
+                <td>${new Date(msg.timestamp).toLocaleDateString('ar-SA')}</td>
+                <td>
+                    <button class="view-btn" data-id="${msg.id}"><i class="fas fa-eye"></i> عرض</button>
+                    <button class="resend-btn" data-id="${msg.id}"><i class="fas fa-redo"></i> إعادة إرسال</button>
+                </td>
+            </tr>`;
+        });
+        html += `</tbody></table>`;
+        container.innerHTML = html;
+
+        container.querySelectorAll('.view-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const msgId = this.dataset.id;
+                const messages = loadMessages();
+                const msg = messages.find(m => m.id === msgId);
+                if (!msg) return showToast('الرسالة غير موجودة', true);
+                showMessageDetails(msg);
+            });
+        });
+
+        container.querySelectorAll('.resend-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const msgId = this.dataset.id;
+                const messages = loadMessages();
+                const msg = messages.find(m => m.id === msgId);
+                if (!msg) return showToast('الرسالة غير موجودة', true);
+                openSendMessageModal(msg.to, msg.subject, msg.body);
+            });
+        });
+    }
+
+    function openSendMessageModal(userEmail, subject = '', body = '') {
+        const modalContent = `
+            <div style="position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:9999; display:flex; align-items:center; justify-content:center;">
+                <div style="background:white; border-radius:32px; padding:30px; max-width:500px; width:90%; max-height:80vh; overflow-y:auto;">
+                    <h4>إرسال رسالة إلى ${userEmail}</h4>
+                    <div class="form-group">
+                        <label>الموضوع</label>
+                        <input type="text" id="msgSubject" value="${subject}" placeholder="موضوع الرسالة" style="width:100%; padding:12px; border-radius:28px; border:1px solid #cfdfe9; font-family:'Cairo';">
+                    </div>
+                    <div class="form-group">
+                        <label>نص الرسالة</label>
+                        <textarea id="msgBody" rows="5" style="width:100%; padding:12px; border-radius:28px; border:1px solid #cfdfe9; font-family:'Cairo';">${body}</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>إرفاق مستندات (PDF, DOC, DOCX) - اختياري</label>
+                        <input type="file" id="msgDocs" accept=".pdf,.doc,.docx" multiple>
+                    </div>
+                    <div class="form-group">
+                        <label>إرفاق صور (JPG, PNG, GIF) - اختياري</label>
+                        <input type="file" id="msgImages" accept="image/*" multiple>
+                    </div>
+                    <div style="display:flex; gap:10px;">
+                        <button class="submit-request" id="sendMsgBtn">إرسال</button>
+                        <button class="back-btn" id="closeMsgModal">إلغاء</button>
+                    </div>
+                </div>
+            </div>
+        `;
+        const overlay = document.createElement('div');
+        overlay.innerHTML = modalContent;
+        document.body.appendChild(overlay);
+
+        overlay.querySelector('#closeMsgModal').addEventListener('click', () => overlay.remove());
+        overlay.querySelector('#sendMsgBtn').addEventListener('click', async function() {
+            const subject = document.getElementById('msgSubject').value.trim();
+            const body = document.getElementById('msgBody').value.trim();
+            if (!subject || !body) {
+                showToast('يرجى ملء الموضوع والرسالة', true);
+                return;
+            }
+            const attachments = [];
+            const docFiles = document.getElementById('msgDocs').files;
+            const imgFiles = document.getElementById('msgImages').files;
+            const allFiles = [...docFiles, ...imgFiles];
+            for (const file of allFiles) {
+                try {
+                    const base64 = await readFileAsBase64(file);
+                    attachments.push({
+                        name: file.name,
+                        type: file.type,
+                        data: base64
+                    });
+                } catch (err) {
+                    console.error('Error reading file:', err);
+                    showToast('حدث خطأ في قراءة الملف: ' + file.name, true);
+                }
+            }
+            sendMessage(OWNER_EMAIL, userEmail, subject, body, attachments);
+            overlay.remove();
+            const userObj = loadUsers().find(u => u.email === userEmail);
+            const recipientName = userObj ? userObj.name : userEmail;
+            showToast(`✅ تم إرسال الرسالة بنجاح إلى ${recipientName} (${userEmail})`);
+            renderAdminSentMessages();
+            updateNotificationBadges();
+            if (document.getElementById('messagesPopup')) {
+                showMessagesPopup();
+            }
+        });
+    }
+
+    function sendMessageToUser(userEmail) {
+        openSendMessageModal(userEmail);
+    }
+
+    function updateNotificationBadges() {
+        const userBadge = document.getElementById('notificationCountUser');
+        if (currentSession.verified && !currentSession.isOwner) {
+            const count = getUnreadCountForUser(currentSession.email) + getUnreadMessagesCount(currentSession.email);
+            userBadge.textContent = count;
+            userBadge.style.display = count > 0 ? 'inline' : 'none';
+        } else {
+            userBadge.style.display = 'none';
+        }
+
+        const adminBadge = document.getElementById('notificationCountAdmin');
+        if (currentSession.isOwner) {
+            const count = getUnreadCountForAdmin() + getUnreadMessagesCount(OWNER_EMAIL);
+            adminBadge.textContent = count;
+            adminBadge.style.display = count > 0 ? 'inline' : 'none';
+        } else {
+            adminBadge.style.display = 'none';
+        }
+    }
+
+    function renderUserRequests() {
+        const container = document.getElementById('userRequestsContainer');
+        if (!currentSession.verified || currentSession.isOwner) {
+            container.innerHTML = '<p>يرجى تسجيل الدخول كمستخدم عادي.</p>';
+            return;
+        }
+        const requests = getUserRequests(currentSession.email);
+        if (requests.length === 0) {
+            container.innerHTML = '<p>لا توجد طلبات حتى الآن.</p>';
+            return;
+        }
+        requests.sort((a,b) => new Date(b.timestamp) - new Date(a.timestamp));
+        let html = `<table class="requests-table">
+            <thead><tr><th>رقم الطلب</th><th>الخدمة</th><th>التاريخ</th><th>الحالة</th><th>ملاحظة المالك</th><th>الإجراءات</th></tr></thead><tbody>`;
+        requests.forEach(req => {
+            const statusMap = { pending: 'تحت المعالجة', completed: 'مكتمل', cancelled: 'ملغي' };
+            const statusText = statusMap[req.status] || req.status;
+            const statusClass = req.status === 'completed' ? 'status-completed' : 
+                               req.status === 'cancelled' ? 'status-cancelled' : 'status-pending';
+            html += `<tr>
+                <td>${req.id.slice(0,8)}</td>
+                <td>${req.serviceName}</td>
+                <td>${new Date(req.timestamp).toLocaleDateString('ar-SA')}</td>
+                <td class="${statusClass}">${statusText}</td>
+                <td>${req.adminNote || 'لا توجد'}</td>
+                <td>
+                    <button class="view-btn" data-id="${req.id}"><i class="fas fa-eye"></i> عرض</button>
+                    <button class="print-btn" data-id="${req.id}"><i class="fas fa-print"></i> طباعة</button>
+                    ${req.status === 'pending' ? `<button class="edit-btn" data-id="${req.id}"><i class="fas fa-edit"></i> تعديل</button>` : ''}
+                    <button class="delete-user-btn" data-id="${req.id}" style="background:#e67e22;"><i class="fas fa-trash"></i> إلغاء</button>
+                </td>
+            </tr>`;
+        });
+        html += `</tbody></table>`;
+        container.innerHTML = html;
+
+        container.querySelectorAll('.view-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                viewRequestDetails(this.dataset.id);
+            });
+        });
+        container.querySelectorAll('.print-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                printRequest(this.dataset.id);
+            });
+        });
+        container.querySelectorAll('.edit-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                editUserRequest(this.dataset.id);
+            });
+        });
+        container.querySelectorAll('.delete-user-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (confirm('هل أنت متأكد من إلغاء هذا الطلب؟')) {
+                    deleteRequest(this.dataset.id);
+                    renderUserRequests();
+                    updateNotificationBadges();
+                    showToast('تم إلغاء الطلب');
+                }
+            });
+        });
+
+        markRequestsAsReadForUser(currentSession.email);
+        updateNotificationBadges();
+    }
+
+    function editUserRequest(requestId) {
+        const requests = loadAllRequests();
+        const req = requests.find(r => r.id === requestId);
+        if (!req) return showToast('الطلب غير موجود', true);
+        if (req.status !== 'pending') return showToast('يمكن تعديل الطلبات تحت الإجراء فقط', true);
+
+        let fieldsHtml = '';
+        for (const [key, value] of Object.entries(req.fields)) {
+            fieldsHtml += `<div class="form-group"><label>${key.replace(/_/g,' ')}</label><input type="text" name="${key}" value="${value || ''}" required></div>`;
+        }
+        const modalContent = `
+            <div style="position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:9999; display:flex; align-items:center; justify-content:center;">
+                <div style="background:white; border-radius:32px; padding:30px; max-width:500px; width:90%; max-height:80vh; overflow-y:auto;">
+                    <h4>تعديل الطلب: ${req.serviceName}</h4>
+                    <form id="editRequestForm">${fieldsHtml}<div class="form-group"><label>ملاحظات إضافية</label><textarea name="notes" rows="3">${req.fields.notes || ''}</textarea></div>
+                    <button type="submit" class="submit-request">حفظ التعديلات</button>
+                    <button type="button" class="back-btn" id="closeEditModal" style="margin-top:10px;">إلغاء</button>
+                    </form>
+                </div>
+            </div>
+        `;
+        const overlay = document.createElement('div');
+        overlay.innerHTML = modalContent;
+        document.body.appendChild(overlay);
+
+        overlay.querySelector('#closeEditModal').addEventListener('click', () => overlay.remove());
+        overlay.querySelector('#editRequestForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const updatedFields = {};
+            for (let [key, val] of formData.entries()) updatedFields[key] = val;
+            const updatedReq = updateRequest(requestId, { fields: updatedFields });
+            if (updatedReq) {
+                showToast('✅ تم التعديل والحفظ بنجاح');
+                overlay.remove();
+                renderUserRequests();
+                updateNotificationBadges();
+            } else {
+                showToast('حدث خطأ', true);
+            }
+        });
+    }
+
+    function renderAdminRequests() {
+        const container = document.getElementById('adminRequestsContainer');
+        if (!currentSession.isOwner) {
+            container.innerHTML = '<p>غير مصرح.</p>';
+            return;
+        }
+        const requests = getAllRequests();
+        if (requests.length === 0) {
+            container.innerHTML = '<p>لا توجد طلبات حتى الآن.</p>';
+            return;
+        }
+        requests.sort((a,b) => new Date(b.timestamp) - new Date(a.timestamp));
+        let html = `<table class="requests-table">
+            <thead><tr><th>رقم الطلب</th><th>العميل</th><th>الخدمة</th><th>التاريخ</th><th>الحالة</th><th>ملاحظة المالك</th><th>الإجراءات</th></tr></thead><tbody>`;
+        requests.forEach(req => {
+            const statusMap = { pending: 'تحت المعالجة', completed: 'مكتمل', cancelled: 'ملغي' };
+            const statusText = statusMap[req.status] || req.status;
+            const statusClass = req.status === 'completed' ? 'status-completed' : 
+                               req.status === 'cancelled' ? 'status-cancelled' : 'status-pending';
+            html += `<tr>
+                <td>${req.id.slice(0,8)}</td>
+                <td>${req.userEmail}</td>
+                <td>${req.serviceName}</td>
+                <td>${new Date(req.timestamp).toLocaleDateString('ar-SA')}</td>
+                <td class="${statusClass}">${statusText}</td>
+                <td>${req.adminNote || ''}</td>
+                <td>
+                    <button class="view-btn" data-id="${req.id}"><i class="fas fa-eye"></i> عرض</button>
+                    <button class="print-btn" data-id="${req.id}"><i class="fas fa-print"></i> طباعة</button>
+                    ${req.status !== 'cancelled' ? `<button class="cancel-btn" data-id="${req.id}" style="background:#c0392b;"><i class="fas fa-times"></i> إلغاء</button>` : ''}
+                    ${req.status === 'pending' ? `<button class="status-btn" data-id="${req.id}" data-status="${req.status}">تغيير الحالة</button>` : ''}
+                    <button class="reset-pwd-btn" data-id="${req.id}">إضافة ملاحظة</button>
+                    <button class="delete-user-btn" data-id="${req.id}">حذف</button>
+                </td>
+            </tr>`;
+        });
+        html += `</tbody></table>`;
+        container.innerHTML = html;
+
+        container.querySelectorAll('.view-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                viewRequestDetails(this.dataset.id);
+            });
+        });
+        container.querySelectorAll('.print-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                printRequest(this.dataset.id);
+            });
+        });
+        container.querySelectorAll('.cancel-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                cancelRequestByAdmin(this.dataset.id);
+            });
+        });
+        container.querySelectorAll('.status-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const id = this.dataset.id;
+                const current = this.dataset.status;
+                const newStatus = current === 'pending' ? 'completed' : 'pending';
+                if (confirm(`تغيير الحالة إلى ${newStatus === 'completed' ? 'مكتمل' : 'تحت المعالجة'}؟`)) {
+                    updateRequest(id, { status: newStatus });
+                    renderAdminRequests();
+                    updateNotificationBadges();
+                    showToast('تم تحديث الحالة');
+                }
+            });
+        });
+        container.querySelectorAll('.reset-pwd-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const id = this.dataset.id;
+                const note = prompt('أدخل ملاحظة للعميل:');
+                if (note !== null) {
+                    updateRequest(id, { adminNote: note });
+                    renderAdminRequests();
+                    updateNotificationBadges();
+                    showToast('تم إضافة الملاحظة');
+                }
+            });
+        });
+        container.querySelectorAll('.delete-user-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (confirm('هل أنت متأكد من حذف هذا الطلب؟')) {
+                    deleteRequest(this.dataset.id);
+                    renderAdminRequests();
+                    updateNotificationBadges();
+                    showToast('تم حذف الطلب');
+                }
+            });
+        });
+
+        markRequestsAsReadForAdmin();
+        updateNotificationBadges();
+    }
+
+    function renderUsersTable() {
+        let users = loadUsers();
+        let tbody = document.getElementById('usersTableBody');
+        tbody.innerHTML = '';
+        users.forEach(user => {
+            let row = tbody.insertRow();
+            row.insertCell(0).innerText = user.email;
+            row.insertCell(1).innerText = user.name || '';
+            row.insertCell(2).innerText = user.regDate;
+            row.insertCell(3).innerText = user.userId;
+            let statusCell = row.insertCell(4);
+            if (user.email === OWNER_EMAIL) statusCell.innerHTML = '<span class="badge-owner">المالك</span>';
+            else statusCell.innerText = 'عادي';
+            let actionCell = row.insertCell(5);
+            if (user.email !== OWNER_EMAIL) {
+                let delBtn = document.createElement('button');
+                delBtn.innerText = 'إزالة';
+                delBtn.className = 'delete-user-btn';
+                delBtn.onclick = () => { removeUser(user.email); };
+                let resetBtn = document.createElement('button');
+                resetBtn.innerText = 'تعديل كلمة المرور';
+                resetBtn.className = 'reset-pwd-btn';
+                resetBtn.onclick = () => openResetForUser(user.email);
+                let msgBtn = document.createElement('button');
+                msgBtn.innerHTML = '<i class="fas fa-envelope"></i> مراسلة';
+                msgBtn.className = 'msg-btn';
+                msgBtn.onclick = () => sendMessageToUser(user.email);
+                actionCell.appendChild(delBtn);
+                actionCell.appendChild(resetBtn);
+                actionCell.appendChild(msgBtn);
+            } else actionCell.innerText = 'صلاحية كاملة';
+        });
+    }
+
+    function removeUser(email) {
+        if (email === OWNER_EMAIL) return;
+        let users = loadUsers().filter(u => u.email !== email);
+        saveUsers(users);
+        if (currentSession.email === email) logoutSession();
+        renderUsersTable();
+        showToast(`تم حذف الحساب ${email}`);
+    }
+
+    function openResetForUser(email) {
+        const newPwd = Math.random().toString(36).slice(-8);
+        let users = loadUsers();
+        let user = users.find(u => u.email === email);
+        if (user) {
+            user.password = newPwd;
+            saveUsers(users);
+            alert(`تم تعيين كلمة مرور جديدة للبريد ${email}: ${newPwd}`);
+            showToast('تم إعادة تعيين كلمة المرور');
+        }
+    }
+
+    function logoutSession() {
+        currentSession = { email: null, verified: false, isOwner: false };
+        updateUI();
+        showToast("تم تسجيل الخروج");
+    }
+
+    function viewRequestDetails(requestId) {
+        const requests = loadAllRequests();
+        const req = requests.find(r => r.id === requestId);
+        if (!req) return showToast('الطلب غير موجود', true);
+
+        let fieldsHtml = '<table style="width:100%; border-collapse:collapse; margin-top:10px;">';
+        fieldsHtml += `<tr><th style="border:1px solid #ccc; padding:8px; background:#f0f0f0;">الحقل</th><th style="border:1px solid #ccc; padding:8px; background:#f0f0f0;">القيمة</th></tr>`;
+        for (const [key, value] of Object.entries(req.fields)) {
+            fieldsHtml += `<tr><td style="border:1px solid #ccc; padding:8px;">${key.replace(/_/g,' ')}</td><td style="border:1px solid #ccc; padding:8px;">${value || 'غير محدد'}</td></tr>`;
+        }
+        fieldsHtml += `</table>`;
+
+        let attachmentsHtml = '';
+        if (req.attachments && req.attachments.length > 0) {
+            attachmentsHtml = '<h4>المرفقات</h4><div style="margin:10px 0;">';
+            req.attachments.forEach((att) => {
+                const isImage = att.type && att.type.startsWith('image/');
+                if (isImage) {
+                    attachmentsHtml += `<div style="display:inline-block; margin:5px; border:1px solid #ddd; padding:5px; border-radius:8px;">
+                        <img src="${att.data}" alt="${att.name}" style="max-width:150px; max-height:150px; border-radius:4px; cursor:pointer;" onclick="window.open('${att.data}','_blank')">
+                        <br><a href="${att.data}" download="${att.name}" class="download-btn" style="font-size:0.8rem; display:inline-block; margin-top:4px; padding:2px 8px; background:#2980b9; color:white; border-radius:20px; text-decoration:none;">تحميل</a>
+                    </div>`;
+                } else {
+                    attachmentsHtml += `<div style="display:inline-block; margin:5px; border:1px solid #ddd; padding:5px; border-radius:8px;">
+                        <i class="fas fa-file" style="font-size:2rem; color:#2980b9;"></i>
+                        <br><a href="${att.data}" download="${att.name}" class="download-btn" style="font-size:0.8rem; display:inline-block; margin-top:4px; padding:2px 8px; background:#2980b9; color:white; border-radius:20px; text-decoration:none;">تحميل ${att.name}</a>
+                    </div>`;
+                }
+            });
+            attachmentsHtml += '</div>';
+        }
+
+        const statusMap = { pending: 'تحت المعالجة', completed: 'مكتمل', cancelled: 'ملغي' };
+        const statusText = statusMap[req.status] || req.status;
+        const cancelReason = req.cancelReason ? `<p><strong>سبب الإلغاء:</strong> ${req.cancelReason}</p>` : '';
+
+        const modalContent = `
+            <div id="requestDetailsModal" style="position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:9999; display:flex; align-items:center; justify-content:center;">
+                <div style="background:white; border-radius:32px; padding:30px; max-width:600px; width:90%; max-height:80vh; overflow-y:auto; direction:rtl;">
+                    <h3>تفاصيل الطلب</h3>
+                    <p><strong>رقم الطلب:</strong> ${req.id.slice(0,8)}</p>
+                    <p><strong>الخدمة:</strong> ${req.serviceName}</p>
+                    <p><strong>التاريخ:</strong> ${new Date(req.timestamp).toLocaleString('ar-SA')}</p>
+                    <p><strong>الحالة:</strong> ${statusText}</p>
+                    <p><strong>ملاحظة المالك:</strong> ${req.adminNote || 'لا توجد'}</p>
+                    ${cancelReason}
+                    <hr>
+                    <h4>بيانات الطلب</h4>
+                    ${fieldsHtml}
+                    ${attachmentsHtml}
+                    <div style="margin-top:20px; display:flex; gap:10px; justify-content:center;">
+                        <button class="print-btn" onclick="printRequest('${req.id}')"><i class="fas fa-print"></i> طباعة</button>
+                        <button class="back-btn" onclick="closeRequestDetails()">رجوع</button>
+                    </div>
+                </div>
+            </div>
+        `;
+        const overlay = document.createElement('div');
+        overlay.innerHTML = modalContent;
+        document.body.appendChild(overlay);
+    }
+
+    function printRequest(requestId) {
+        const requests = loadAllRequests();
+        const req = requests.find(r => r.id === requestId);
+        if (!req) return showToast('الطلب غير موجود', true);
+
+        let fieldsHtml = '<table style="width:100%; border-collapse:collapse;">';
+        fieldsHtml += `<tr><th style="border:1px solid #333; padding:8px; background:#eee;">الحقل</th><th style="border:1px solid #333; padding:8px; background:#eee;">القيمة</th></tr>`;
+        for (const [key, value] of Object.entries(req.fields)) {
+            fieldsHtml += `<tr><td style="border:1px solid #333; padding:8px;">${key.replace(/_/g,' ')}</td><td style="border:1px solid #333; padding:8px;">${value || 'غير محدد'}</td></tr>`;
+        }
+        fieldsHtml += `</table>`;
+
+        const statusMap = { pending: 'تحت المعالجة', completed: 'مكتمل', cancelled: 'ملغي' };
+        const statusText = statusMap[req.status] || req.status;
+        const cancelReason = req.cancelReason ? `<p><strong>سبب الإلغاء:</strong> ${req.cancelReason}</p>` : '';
+
+        const printContent = `
+            <div class="print-content" style="direction:rtl; font-family:'Cairo', sans-serif; padding:20px;">
+                <h2 style="color:#0b2b3b; text-align:center;">مكتب أسرار البيان</h2>
+                <h3 style="text-align:center;">تفاصيل الطلب</h3>
+                <hr>
+                <p><strong>رقم الطلب:</strong> ${req.id.slice(0,8)}</p>
+                <p><strong>الخدمة:</strong> ${req.serviceName}</p>
+                <p><strong>التاريخ:</strong> ${new Date(req.timestamp).toLocaleString('ar-SA')}</p>
+                <p><strong>الحالة:</strong> ${statusText}</p>
+                <p><strong>ملاحظة المالك:</strong> ${req.adminNote || 'لا توجد'}</p>
+                ${cancelReason}
+                <hr>
+                <h4>بيانات الطلب</h4>
+                ${fieldsHtml}
+                <hr>
+                <p style="text-align:center; color:#666; font-size:0.9rem;">تم الطباعة من نظام أسرار البيان</p>
+            </div>
+        `;
+
+        const printWindow = window.open('', '_blank', 'width=800,height=600');
+        if (!printWindow) {
+            alert('يرجى السماح بالنوافذ المنبثقة لاستخدام خاصية الطباعة');
+            return;
+        }
+        printWindow.document.write(`
+            <!DOCTYPE html>
+            <html dir="rtl">
+            <head><meta charset="UTF-8"><title>طباعة الطلب</title>
+            <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+            <style>
+                body { font-family:'Cairo', sans-serif; padding:20px; }
+                table { width:100%; border-collapse:collapse; }
+                th, td { border:1px solid #333; padding:8px; text-align:center; }
+                th { background:#eee; }
+                hr { margin:15px 0; }
+            </style>
+            </head>
+            <body>
+                ${printContent}
+                <script>
+                    window.onload = function() { window.print(); }
+                <\/script>
+            </body>
+            </html>
+        `);
+        printWindow.document.close();
+    }
+
+    function cancelRequestByAdmin(requestId) {
+        const requests = loadAllRequests();
+        const req = requests.find(r => r.id === requestId);
+        if (!req) return showToast('الطلب غير موجود', true);
+        if (req.status === 'cancelled') return showToast('الطلب ملغي بالفعل', true);
+
+        const modalContent = `
+            <div style="position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:9999; display:flex; align-items:center; justify-content:center;">
+                <div style="background:white; border-radius:32px; padding:30px; max-width:500px; width:90%;">
+                    <h4>إلغاء الطلب</h4>
+                    <p style="color:#666;">الخدمة: ${req.serviceName}</p>
+                    <div class="form-group">
+                        <label>سبب الإلغاء</label>
+                        <textarea id="cancelReasonText" rows="3" style="width:100%; padding:12px; border-radius:28px; border:1px solid #cfdfe9; font-family:'Cairo';" placeholder="اذكر سبب الإلغاء..."></textarea>
+                    </div>
+                    <div style="display:flex; gap:10px;">
+                        <button class="submit-request" id="confirmCancelBtn">تأكيد الإلغاء</button>
+                        <button class="back-btn" id="closeCancelModal">إلغاء</button>
+                    </div>
+                </div>
+            </div>
+        `;
+        const overlay = document.createElement('div');
+        overlay.innerHTML = modalContent;
+        document.body.appendChild(overlay);
+
+        overlay.querySelector('#closeCancelModal').addEventListener('click', () => overlay.remove());
+        overlay.querySelector('#confirmCancelBtn').addEventListener('click', function() {
+            const reason = document.getElementById('cancelReasonText').value.trim();
+            if (!reason) {
+                showToast('يرجى كتابة سبب الإلغاء', true);
+                return;
+            }
+            updateRequest(requestId, { 
+                status: 'cancelled', 
+                cancelReason: reason,
+                adminNote: `ملغي بسبب: ${reason}`
+            });
+            overlay.remove();
+            showToast('✅ تم إلغاء الطلب');
+            renderAdminRequests();
+            updateNotificationBadges();
+        });
+    }
+
+    // ---------- نظام السمات (تخصيص الواجهات) ----------
+    function loadThemeSettings() {
+        let theme = localStorage.getItem('asrar_theme');
+        if (theme) {
+            try { return JSON.parse(theme); } catch(e) { return {}; }
+        }
+        return {};
+    }
+
+    function saveThemeSettings(theme) {
+        localStorage.setItem('asrar_theme', JSON.stringify(theme));
+    }
+
+    function applyTheme(theme) {
+        if (theme.loginBg) {
+            if (theme.loginBg.startsWith('data:image')) {
+                document.querySelector('#authModal .modal-card').style.backgroundImage = `url(${theme.loginBg})`;
+                document.querySelector('#authModal .modal-card').style.backgroundSize = 'cover';
+                document.querySelector('#authModal .modal-card').style.backgroundPosition = 'center';
+                document.querySelector('#authModal .modal-card').style.backgroundColor = 'transparent';
+            } else {
+                document.querySelector('#authModal .modal-card').style.backgroundImage = 'none';
+                document.querySelector('#authModal .modal-card').style.backgroundColor = theme.loginBg;
+            }
+        } else {
+            document.querySelector('#authModal .modal-card').style.backgroundImage = 'none';
+            document.querySelector('#authModal .modal-card').style.backgroundColor = '#fff';
+        }
+
+        if (theme.mainBg) {
+            if (theme.mainBg.startsWith('data:image')) {
+                document.body.style.backgroundImage = `url(${theme.mainBg})`;
+                document.body.style.backgroundSize = 'cover';
+                document.body.style.backgroundPosition = 'center';
+                document.body.style.backgroundColor = 'transparent';
+            } else {
+                document.body.style.backgroundImage = 'none';
+                document.body.style.backgroundColor = theme.mainBg;
+            }
+        } else {
+            document.body.style.backgroundImage = 'none';
+            document.body.style.backgroundColor = '#f6f9fc';
+        }
+
+        if (theme.internalBg) {
+            const internalElements = document.querySelectorAll('.dashboard-area, .admin-panel, .subservices-container, .testimonials-section');
+            if (theme.internalBg.startsWith('data:image')) {
+                internalElements.forEach(el => {
+                    el.style.backgroundImage = `url(${theme.internalBg})`;
+                    el.style.backgroundSize = 'cover';
+                    el.style.backgroundPosition = 'center';
+                    el.style.backgroundColor = 'transparent';
+                });
+            } else {
+                internalElements.forEach(el => {
+                    el.style.backgroundImage = 'none';
+                    el.style.backgroundColor = theme.internalBg;
+                });
+            }
+        } else {
+            const internalElements = document.querySelectorAll('.dashboard-area, .admin-panel, .subservices-container, .testimonials-section');
+            internalElements.forEach(el => {
+                el.style.backgroundImage = 'none';
+                el.style.backgroundColor = '';
+            });
+        }
+    }
+
+    function resetTheme() {
+        localStorage.removeItem('asrar_theme');
+        document.querySelector('#authModal .modal-card').style.backgroundImage = 'none';
+        document.querySelector('#authModal .modal-card').style.backgroundColor = '#fff';
+        document.body.style.backgroundImage = 'none';
+        document.body.style.backgroundColor = '#f6f9fc';
+        const internalElements = document.querySelectorAll('.dashboard-area, .admin-panel, .subservices-container, .testimonials-section');
+        internalElements.forEach(el => {
+            el.style.backgroundImage = 'none';
+            el.style.backgroundColor = '';
+        });
+        showToast('تم إعادة تعيين السمات إلى الوضع الافتراضي');
+    }
+
+    const initialTheme = loadThemeSettings();
+    if (initialTheme && Object.keys(initialTheme).length > 0) {
+        applyTheme(initialTheme);
+    }
+
+    // ---------- نافذة الإعدادات (مع تخصيص الواجهات للمالك) ----------
+    function openSettings(userEmail) {
+        const users = loadUsers();
+        const user = users.find(u => u.email === userEmail);
+        if (!user) return showToast('المستخدم غير موجود', true);
+
+        const isOwner = user.email === OWNER_EMAIL;
+        const currentTheme = loadThemeSettings();
+
+        let ownerThemeHtml = '';
+        if (isOwner) {
+            ownerThemeHtml = `
+                <hr style="margin:20px 0;">
+                <h4 style="text-align:center; margin-bottom:15px;">🎨 تخصيص الواجهات</h4>
+                <div class="note">اختر اللون أو ارفع صورة لكل واجهة. اترك الحقل فارغاً لاستخدام الإعداد الافتراضي.</div>
+                <div class="form-group">
+                    <label>خلفية صفحة تسجيل الدخول</label>
+                    <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center;">
+                        <input type="color" id="loginBgColor" value="${currentTheme.loginBg && !currentTheme.loginBg.startsWith('data:image') ? currentTheme.loginBg : '#ffffff'}" style="width:50px; height:50px; border:none; padding:0; cursor:pointer;">
+                        <span style="font-size:0.8rem;">أو</span>
+                        <input type="file" id="loginBgImage" accept="image/*" style="flex:1;">
+                    </div>
+                    <div class="theme-preview" id="loginPreview">معاينة</div>
+                </div>
+                <div class="form-group">
+                    <label>خلفية الصفحة الرئيسية</label>
+                    <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center;">
+                        <input type="color" id="mainBgColor" value="${currentTheme.mainBg && !currentTheme.mainBg.startsWith('data:image') ? currentTheme.mainBg : '#f6f9fc'}" style="width:50px; height:50px; border:none; padding:0; cursor:pointer;">
+                        <span style="font-size:0.8rem;">أو</span>
+                        <input type="file" id="mainBgImage" accept="image/*" style="flex:1;">
+                    </div>
+                    <div class="theme-preview" id="mainPreview">معاينة</div>
+                </div>
+                <div class="form-group">
+                    <label>خلفية الواجهات الداخلية (لوحة المستخدم، المالك، الخدمات)</label>
+                    <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center;">
+                        <input type="color" id="internalBgColor" value="${currentTheme.internalBg && !currentTheme.internalBg.startsWith('data:image') ? currentTheme.internalBg : '#ffffff'}" style="width:50px; height:50px; border:none; padding:0; cursor:pointer;">
+                        <span style="font-size:0.8rem;">أو</span>
+                        <input type="file" id="internalBgImage" accept="image/*" style="flex:1;">
+                    </div>
+                    <div class="theme-preview" id="internalPreview">معاينة</div>
+                </div>
+                <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;">
+                    <button type="button" id="resetThemeBtn" class="cancel-btn" style="flex:1; background:#c0392b; color:white;">إعادة تعيين السمات</button>
+                </div>
+            `;
+        }
+
+        const modalHtml = `
+            <div class="settings-modal" id="settingsModal">
+                <div class="settings-modal-content">
+                    <h3 style="text-align:center;">${isOwner ? 'إعدادات المالك' : 'إعدادات المستخدم'}</h3>
+                    <div class="note">📝 يمكنك تغيير الاسم فقط دون الحاجة لكلمة المرور. لتغيير البريد الإلكتروني أو كلمة المرور، يلزم إدخال كلمة المرور الحالية.</div>
+                    <form id="settingsForm">
+                        <div class="form-group">
+                            <label>الاسم</label>
+                            <input type="text" id="settingsName" value="${user.name || ''}" required>
+                        </div>
+                        <div class="form-group">
+                            <label>البريد الإلكتروني</label>
+                            <input type="email" id="settingsEmail" value="${user.email}" required>
+                        </div>
+                        <div class="form-group">
+                            <label>كلمة المرور الحالية <span style="color:#c0392b; font-weight:normal;">(مطلوبة لتغيير البريد أو كلمة المرور)</span></label>
+                            <div class="password-wrapper">
+                                <input type="password" id="settingsOldPassword" placeholder="أدخل كلمة المرور الحالية">
+                                <i class="fas fa-eye toggle-pwd" id="toggleSettingsOldPwd"></i>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>كلمة المرور الجديدة <span style="color:#7f8c8d; font-weight:normal;">(اتركها فارغة إذا لا تريد تغييرها)</span></label>
+                            <div class="password-wrapper">
+                                <input type="password" id="settingsNewPassword" placeholder="كلمة المرور الجديدة">
+                                <i class="fas fa-eye toggle-pwd" id="toggleSettingsNewPwd"></i>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>تأكيد كلمة المرور الجديدة</label>
+                            <div class="password-wrapper">
+                                <input type="password" id="settingsConfirmPassword" placeholder="تأكيد كلمة المرور الجديدة">
+                                <i class="fas fa-eye toggle-pwd" id="toggleSettingsConfirmPwd"></i>
+                            </div>
+                        </div>
+                        ${ownerThemeHtml}
+                        <div class="btn-group">
+                            <button type="submit" class="save-btn">حفظ</button>
+                            <button type="button" class="cancel-btn" id="settingsCancelBtn">إلغاء</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        `;
+        const container = document.getElementById('settingsModalContainer');
+        container.innerHTML = modalHtml;
+
+        const modal = document.getElementById('settingsModal');
+        modal.querySelector('#settingsCancelBtn').addEventListener('click', () => {
+            container.innerHTML = '';
+        });
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) container.innerHTML = '';
+        });
+
+        // تهيئة أيقونات إظهار/إخفاء كلمة المرور في نافذة الإعدادات
+        setupToggle('settingsOldPassword', 'toggleSettingsOldPwd');
+        setupToggle('settingsNewPassword', 'toggleSettingsNewPwd');
+        setupToggle('settingsConfirmPassword', 'toggleSettingsConfirmPwd');
+
+        function previewImage(input, previewId) {
+            const preview = document.getElementById(previewId);
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    preview.innerHTML = `<img src="${e.target.result}" alt="معاينة" style="max-width:100%; max-height:150px; border-radius:8px;">`;
+                };
+                reader.readAsDataURL(input.files[0]);
+            } else {
+                preview.innerHTML = 'معاينة';
+            }
+        }
+
+        const loginImageInput = document.getElementById('loginBgImage');
+        const mainImageInput = document.getElementById('mainBgImage');
+        const internalImageInput = document.getElementById('internalBgImage');
+        if (loginImageInput) loginImageInput.addEventListener('change', function() { previewImage(this, 'loginPreview'); });
+        if (mainImageInput) mainImageInput.addEventListener('change', function() { previewImage(this, 'mainPreview'); });
+        if (internalImageInput) internalImageInput.addEventListener('change', function() { previewImage(this, 'internalPreview'); });
+
+        document.getElementById('loginBgColor')?.addEventListener('input', function() {
+            document.getElementById('loginPreview').innerHTML = `<div style="background:${this.value}; width:100%; height:50px; border-radius:8px;"></div>`;
+        });
+        document.getElementById('mainBgColor')?.addEventListener('input', function() {
+            document.getElementById('mainPreview').innerHTML = `<div style="background:${this.value}; width:100%; height:50px; border-radius:8px;"></div>`;
+        });
+        document.getElementById('internalBgColor')?.addEventListener('input', function() {
+            document.getElementById('internalPreview').innerHTML = `<div style="background:${this.value}; width:100%; height:50px; border-radius:8px;"></div>`;
+        });
+
+        document.getElementById('resetThemeBtn')?.addEventListener('click', function() {
+            if (confirm('هل أنت متأكد من إعادة تعيين جميع السمات إلى الوضع الافتراضي؟')) {
+                resetTheme();
+                document.getElementById('loginBgColor').value = '#ffffff';
+                document.getElementById('mainBgColor').value = '#f6f9fc';
+                document.getElementById('internalBgColor').value = '#ffffff';
+                document.getElementById('loginPreview').innerHTML = 'معاينة';
+                document.getElementById('mainPreview').innerHTML = 'معاينة';
+                document.getElementById('internalPreview').innerHTML = 'معاينة';
+                document.getElementById('loginBgImage').value = '';
+                document.getElementById('mainBgImage').value = '';
+                document.getElementById('internalBgImage').value = '';
+                const theme = loadThemeSettings();
+                if (theme && Object.keys(theme).length > 0) {
+                    applyTheme({});
+                }
+            }
+        });
+
+        document.getElementById('settingsForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('settingsName').value.trim();
+            const newEmail = document.getElementById('settingsEmail').value.trim();
+            const oldPwd = document.getElementById('settingsOldPassword').value;
+            const newPwd = document.getElementById('settingsNewPassword').value;
+            const confirmPwd = document.getElementById('settingsConfirmPassword').value;
+
+            if (!name || !newEmail) {
+                showToast('يرجى ملء الاسم والبريد الإلكتروني', true);
+                return;
+            }
+
+            const emailChanged = (newEmail !== user.email);
+            const pwdChanged = (newPwd.length > 0);
+
+            if (emailChanged || pwdChanged) {
+                if (!oldPwd) {
+                    showToast('لتغيير البريد الإلكتروني أو كلمة المرور، يجب إدخال كلمة المرور الحالية', true);
+                    return;
+                }
+                if (user.password !== oldPwd) {
+                    showToast('كلمة المرور الحالية غير صحيحة', true);
+                    return;
+                }
+            }
+
+            if (emailChanged) {
+                const existing = loadUsers().find(u => u.email === newEmail && u.email !== user.email);
+                if (existing) {
+                    showToast('البريد الإلكتروني الجديد مستخدم من قبل', true);
+                    return;
+                }
+            }
+
+            if (pwdChanged) {
+                if (newPwd.length < 5) {
+                    showToast('كلمة المرور الجديدة يجب أن تكون 5 أحرف على الأقل', true);
+                    return;
+                }
+                if (newPwd !== confirmPwd) {
+                    showToast('كلمتا المرور الجديدة غير متطابقتين', true);
+                    return;
+                }
+                user.password = newPwd;
+            }
+
+            user.name = name;
+            const oldEmail = user.email;
+            user.email = newEmail;
+
+            saveUsers(loadUsers());
+
+            if (currentSession.email === oldEmail) {
+                currentSession.email = newEmail;
+                if (newEmail === OWNER_EMAIL) currentSession.isOwner = true;
+                else currentSession.isOwner = false;
+            }
+
+            if (isOwner) {
+                const themeSettings = {};
+                const loginColor = document.getElementById('loginBgColor')?.value;
+                const mainColor = document.getElementById('mainBgColor')?.value;
+                const internalColor = document.getElementById('internalBgColor')?.value;
+                const loginImage = document.getElementById('loginBgImage')?.files[0];
+                const mainImage = document.getElementById('mainBgImage')?.files[0];
+                const internalImage = document.getElementById('internalBgImage')?.files[0];
+
+                const promises = [];
+                if (loginImage) {
+                    promises.push(readFileAsBase64(loginImage).then(data => { themeSettings.loginBg = data; }));
+                } else if (loginColor && loginColor !== '#ffffff') {
+                    themeSettings.loginBg = loginColor;
+                }
+                if (mainImage) {
+                    promises.push(readFileAsBase64(mainImage).then(data => { themeSettings.mainBg = data; }));
+                } else if (mainColor && mainColor !== '#f6f9fc') {
+                    themeSettings.mainBg = mainColor;
+                }
+                if (internalImage) {
+                    promises.push(readFileAsBase64(internalImage).then(data => { themeSettings.internalBg = data; }));
+                } else if (internalColor && internalColor !== '#ffffff') {
+                    themeSettings.internalBg = internalColor;
+                }
+
+                Promise.all(promises).then(() => {
+                    saveThemeSettings(themeSettings);
+                    applyTheme(themeSettings);
+                    container.innerHTML = '';
+                    showToast('✅ تم تحديث الإعدادات والسمات بنجاح');
+                    updateUI();
+                }).catch(err => {
+                    console.error('Error saving theme:', err);
+                    showToast('حدث خطأ في حفظ الصور', true);
+                });
+            } else {
+                container.innerHTML = '';
+                showToast('✅ تم تحديث الإعدادات بنجاح');
+                updateUI();
+            }
+        });
+    }
+
+    // ---------- تحديث واجهة المستخدم العامة ----------
+    function updateUI() {
+        const logged = currentSession.verified;
+        const isOwner = currentSession.isOwner;
+        document.getElementById('showLoginModalBtn').style.display = logged ? 'none' : 'inline-block';
+        document.getElementById('showRegisterModalBtn').style.display = logged ? 'none' : 'inline-block';
+        document.getElementById('navAccountBtn').style.display = logged ? 'inline-block' : 'none';
+        document.getElementById('dashboardPanel').classList.toggle('hidden', !(logged && !isOwner));
+        document.getElementById('adminPanel').classList.toggle('hidden', !(logged && isOwner));
+        if (logged && !isOwner) {
+            fillUserDashboard();
+            renderUserRequests();
+        }
+        if (logged && isOwner) {
+            renderUsersTable();
+            renderAdminRequests();
+            renderAdminSentMessages();
+        }
+        updateNotificationBadges();
+        const theme = loadThemeSettings();
+        if (theme && Object.keys(theme).length > 0) {
+            applyTheme(theme);
+        }
+    }
+
+    function fillUserDashboard() {
+        let user = loadUsers().find(u => u.email === currentSession.email);
+        if (user) {
+            document.getElementById('dashboardUserName').innerText = user.name || user.email.split('@')[0];
+            document.getElementById('privateEmail').innerText = user.email;
+            document.getElementById('privateName').innerText = user.name || '';
+            document.getElementById('privateRegDate').innerText = user.regDate;
+            document.getElementById('privateUid').innerText = user.userId.slice(0,8) + '***';
+        }
+    }
+
+    // ---------- الخدمات الفرعية والنماذج ----------
+    const subServicesMap = {
+        "individuals": {
+            title: "خدمات الأفراد والمؤسسات",
+            services: [
+                { id: "transfer_sponsorship", name: "نقل كفالة", fields: ["الاسم الكامل", "رقم الإقامة", "رقم الجوال", "اسم الكفيل الجديد", "سبب النقل"] },
+                { id: "issue_visa", name: "إصدار تأشيرة عمل", fields: ["اسم المنشأة", "رقم السجل التجاري", "المهنة", "عدد التأشيرات", "ملاحظات"] },
+                { id: "renew_residency", name: "تجديد إقامة", fields: ["الاسم الكامل", "رقم الإقامة", "تاريخ انتهاء الإقامة", "طريقة التجديد (سنوي/شهري)"] },
+                { id: "cancel_visa", name: "إلغاء تأشيرة", fields: ["رقم التأشيرة", "اسم المستفيد", "سبب الإلغاء"] },
+                { id: "violations_inquiry", name: "الاستعلام عن مخالفات", fields: ["رقم الإقامة", "رقم الجوال"] }
+            ]
+        },
+        "insurance": {
+            title: "جميع أنواع التأمينات",
+            services: [
+                { id: "health_insurance", name: "وثيقة تأمين طبي", fields: ["الاسم الكامل", "رقم الهوية", "تاريخ الميلاد", "نوع التغطية (عائلي/فردي)", "الحالة الصحية"] },
+                { id: "car_insurance", name: "تأمين مركبة", fields: ["رقم اللوحة", "موديل المركبة", "نوع التأمين (شامل/ضد الغير)", "السائقين الإضافيين"] },
+                { id: "travel_insurance", name: "تأمين سفر", fields: ["الوجهة", "مدة السفر (أيام)", "عدد المسافرين", "تغطية أمتعة (نعم/لا)"] }
+            ]
+        }
+    };
+
+    let currentSubServiceType = null;
+    let selectedSubService = null;
+
+    function showSubServicesPanel(type) {
+        if (!currentSession.verified) {
+            showToast('يرجى تسجيل الدخول أولاً', true);
+            openAuthModal('login');
+            return;
+        }
+        currentSubServiceType = type;
+        const data = subServicesMap[type];
+        document.getElementById('subServiceTitle').innerText = data.title;
+        const listDiv = document.getElementById('subServicesList');
+        listDiv.innerHTML = '';
+        data.services.forEach(svc => {
+            const svcDiv = document.createElement('div');
+            svcDiv.className = 'subservice-item';
+            svcDiv.innerHTML = `<h3>${svc.name}</h3><p>انقر لطلب هذه الخدمة</p>`;
+            svcDiv.onclick = () => showRequestForm(svc);
+            listDiv.appendChild(svcDiv);
+        });
+        document.getElementById('requestFormContainer').classList.add('hidden');
+        document.getElementById('servicesSection').classList.add('hidden');
+        document.getElementById('subServicesPanel').classList.remove('hidden');
+        document.getElementById('subServicesPanel').scrollIntoView({ behavior: 'smooth' });
+        const theme = loadThemeSettings();
+        if (theme && Object.keys(theme).length > 0) {
+            applyTheme(theme);
+        }
+    }
+
+    function showRequestForm(service) {
+        selectedSubService = service;
+        const container = document.getElementById('requestFormContainer');
+        let fieldsHtml = '';
+        service.fields.forEach(field => {
+            fieldsHtml += `<div class="form-group"><label>${field}</label><input type="text" name="${field.replace(/\s/g,'_')}" placeholder="أدخل ${field}" required></div>`;
+        });
+        container.innerHTML = `
+            <h3>طلب خدمة: ${service.name}</h3>
+            <form id="dynamicRequestForm">
+                ${fieldsHtml}
+                <div class="form-group"><label>ملاحظات إضافية</label><textarea name="notes" rows="3" placeholder="أي تفاصيل إضافية..."></textarea></div>
+                <div class="form-group">
+                    <label>إرفاق مستندات (PDF, DOC, DOCX) - اختياري</label>
+                    <input type="file" name="documents" accept=".pdf,.doc,.docx" multiple>
+                </div>
+                <div class="form-group">
+                    <label>إرفاق صور (JPG, PNG, GIF) - اختياري</label>
+                    <input type="file" name="images" accept="image/*" multiple>
+                </div>
+                <button type="submit" class="submit-request">إرسال الطلب</button>
+            </form>
+        `;
+        container.classList.remove('hidden');
+        document.getElementById('dynamicRequestForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            if (!currentSession.verified) {
+                showToast("يجب تسجيل الدخول أولاً", true);
+                openAuthModal('login');
+                return;
+            }
+            const formData = new FormData(e.target);
+            const requestData = {
+                serviceName: selectedSubService.name,
+                mainCategory: currentSubServiceType,
+                userEmail: currentSession.email,
+                timestamp: new Date().toISOString(),
+                fields: {},
+                attachments: []
+            };
+            for (let [key, value] of formData.entries()) {
+                if (key !== 'documents' && key !== 'images') {
+                    requestData.fields[key] = value;
+                }
+            }
+            const docFiles = formData.getAll('documents').filter(f => f.size > 0);
+            const imgFiles = formData.getAll('images').filter(f => f.size > 0);
+            const allFiles = [...docFiles, ...imgFiles];
+            for (const file of allFiles) {
+                try {
+                    const base64 = await readFileAsBase64(file);
+                    requestData.attachments.push({
+                        name: file.name,
+                        type: file.type,
+                        data: base64
+                    });
+                } catch (err) {
+                    console.error('Error reading file:', err);
+                    showToast('حدث خطأ في قراءة الملف: ' + file.name, true);
+                }
+            }
+            addRequest(requestData);
+            showToast('✅ تم إرسال الطلب بنجاح، سيتم التواصل معك قريباً.');
+            container.classList.add('hidden');
+            showSubServicesPanel(currentSubServiceType);
+            if (!currentSession.isOwner) renderUserRequests();
+            if (currentSession.isOwner) renderAdminRequests();
+            updateNotificationBadges();
+        });
+        container.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function backToMainServices() {
+        document.getElementById('subServicesPanel').classList.add('hidden');
+        document.getElementById('servicesSection').classList.remove('hidden');
+        currentSubServiceType = null;
+        selectedSubService = null;
+        const theme = loadThemeSettings();
+        if (theme && Object.keys(theme).length > 0) {
+            applyTheme(theme);
+        }
+    }
+
+    document.querySelectorAll('.request-main-service').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const card = btn.closest('.service-card');
+            const type = card.getAttribute('data-service-type');
+            if (type === 'individuals') showSubServicesPanel('individuals');
+            else if (type === 'insurance') showSubServicesPanel('insurance');
+        });
+    });
+
+    function requestSimpleService(serviceName) {
+        if (!currentSession.verified) {
+            showToast('يجب تسجيل الدخول أولاً', true);
+            openAuthModal('login');
+            return;
+        }
+        const requestData = {
+            serviceName: serviceName,
+            mainCategory: 'عام',
+            userEmail: currentSession.email,
+            timestamp: new Date().toISOString(),
+            fields: { notes: 'طلب خدمة سريع (بدون نموذج)' },
+            attachments: []
+        };
+        addRequest(requestData);
+        showToast('✅ تم إرسال الطلب بنجاح، سيتم التواصل معك قريباً.');
+        if (!currentSession.isOwner) renderUserRequests();
+        if (currentSession.isOwner) renderAdminRequests();
+        updateNotificationBadges();
+    }
+    document.querySelectorAll('.request-service').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            let service = btn.getAttribute('data-service');
+            if (service) requestSimpleService(service);
+        });
+    });
+    document.querySelectorAll('.quick-service').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            let service = btn.getAttribute('data-service');
+            if (service === 'خدمات الأفراد والمؤسسات') showSubServicesPanel('individuals');
+            else if (service === 'جميع أنواع التأمينات') showSubServicesPanel('insurance');
+            else requestSimpleService(service);
+        });
+    });
+
+    document.getElementById('logoutBtn').addEventListener('click', logoutSession);
+    document.getElementById('adminLogoutBtn').addEventListener('click', logoutSession);
+
+    document.getElementById('navAccountBtn').addEventListener('click', function() {
+        if (currentSession.verified) {
+            if (currentSession.isOwner) {
+                document.getElementById('adminPanel').classList.remove('hidden');
+                document.getElementById('dashboardPanel').classList.add('hidden');
+                document.getElementById('servicesSection').classList.add('hidden');
+                document.getElementById('subServicesPanel').classList.add('hidden');
+                document.getElementById('adminPanel').scrollIntoView({ behavior: 'smooth' });
+                updateUI();
+            } else {
+                document.getElementById('dashboardPanel').classList.remove('hidden');
+                document.getElementById('adminPanel').classList.add('hidden');
+                document.getElementById('servicesSection').classList.add('hidden');
+                document.getElementById('subServicesPanel').classList.add('hidden');
+                document.getElementById('dashboardPanel').scrollIntoView({ behavior: 'smooth' });
+                fillUserDashboard();
+                renderUserRequests();
+                updateUI();
+            }
+        } else {
+            openAuthModal('login');
+        }
+    });
+
+    document.getElementById('navHome').addEventListener('click', function() {
+        document.getElementById('servicesSection').classList.remove('hidden');
+        document.getElementById('subServicesPanel').classList.add('hidden');
+        document.getElementById('dashboardPanel').classList.add('hidden');
+        document.getElementById('adminPanel').classList.add('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        const theme = loadThemeSettings();
+        if (theme && Object.keys(theme).length > 0) applyTheme(theme);
+    });
+
+    document.getElementById('navServicesLink').addEventListener('click', function() {
+        document.getElementById('servicesSection').classList.remove('hidden');
+        document.getElementById('subServicesPanel').classList.add('hidden');
+        document.getElementById('dashboardPanel').classList.add('hidden');
+        document.getElementById('adminPanel').classList.add('hidden');
+        document.getElementById('servicesSection').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    document.getElementById('backBtnDashboard').onclick = function() {
+        document.getElementById('servicesSection').classList.remove('hidden');
+        document.getElementById('subServicesPanel').classList.add('hidden');
+        document.getElementById('dashboardPanel').classList.add('hidden');
+        document.getElementById('adminPanel').classList.add('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        const theme = loadThemeSettings();
+        if (theme && Object.keys(theme).length > 0) applyTheme(theme);
+    };
+
+    document.getElementById('backBtnAdmin').onclick = function() {
+        document.getElementById('servicesSection').classList.remove('hidden');
+        document.getElementById('subServicesPanel').classList.add('hidden');
+        document.getElementById('dashboardPanel').classList.add('hidden');
+        document.getElementById('adminPanel').classList.add('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        const theme = loadThemeSettings();
+        if (theme && Object.keys(theme).length > 0) applyTheme(theme);
+    };
+
+    document.getElementById('backToMainServicesBtn').onclick = backToMainServices;
+    document.getElementById('heroRequestBtn').onclick = () => showSubServicesPanel('individuals');
+
+    // ---------- نوافذ المصادقة ----------
+    const modal = document.getElementById('authModal');
+    function openAuthModal(type) {
+        modal.style.display = 'flex';
+        document.getElementById('modalLoginForm').style.display = type === 'login' ? 'block' : 'none';
+        document.getElementById('modalRegisterForm').style.display = type === 'register' ? 'block' : 'none';
+        document.getElementById('modalResetPwd').style.display = type === 'reset' ? 'block' : 'none';
+        document.querySelectorAll('#authModal input').forEach(inp => inp.value = '');
+        const errorDiv = document.getElementById('resetErrorMsg');
+        if (errorDiv) { errorDiv.style.display = 'none'; errorDiv.innerText = ''; }
+        const theme = loadThemeSettings();
+        if (theme && Object.keys(theme).length > 0) {
+            applyTheme(theme);
+        }
+    }
+    document.getElementById('showLoginModalBtn').onclick = () => openAuthModal('login');
+    document.getElementById('showRegisterModalBtn').onclick = () => openAuthModal('register');
+    document.getElementById('closeModalBtn').onclick = () => modal.style.display = 'none';
+    window.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; };
+    document.getElementById('switchToRegister').onclick = () => openAuthModal('register');
+    document.getElementById('switchToLogin').onclick = () => openAuthModal('login');
+    document.getElementById('forgotPasswordLink').onclick = () => openAuthModal('reset');
+    document.getElementById('backToLoginFromReset').onclick = () => openAuthModal('login');
+
+    document.getElementById('loginBtn').onclick = () => {
+        const email = document.getElementById('loginEmail').value.trim();
+        const password = document.getElementById('loginPassword').value;
+        if (!email || !password) { showToast('يرجى ملء جميع الحقول', true); return; }
+        const res = loginUser(email, password);
+        showToast(res.msg, !res.success);
+        if (res.success) {
+            modal.style.display = 'none';
+            updateUI();
+        }
+    };
+
+    document.getElementById('doRegisterBtn').onclick = () => {
+        const name = document.getElementById('regName').value.trim();
+        const email = document.getElementById('regEmail').value.trim();
+        const password = document.getElementById('regPassword').value;
+        const confirm = document.getElementById('regConfirm').value;
+        if (!name || !email || !password || !confirm) { showToast('يرجى ملء جميع الحقول', true); return; }
+        if (password !== confirm) { showToast('كلمتا المرور غير متطابقتين', true); return; }
+        const res = registerUser(name, email, password);
+        showToast(res.msg, !res.success);
+        if (res.success) {
+            modal.style.display = 'none';
+            showToast('✅ تم إنشاء حسابك، يمكنك تسجيل الدخول الآن');
+            setTimeout(() => openAuthModal('login'), 1500);
+        }
+    };
+
+    document.getElementById('sendResetBtn').onclick = async () => {
+        const email = document.getElementById('resetEmail').value.trim();
+        const errorDiv = document.getElementById('resetErrorMsg');
+        if (!email) {
+            errorDiv.style.display = 'block';
+            errorDiv.innerText = 'يرجى إدخال البريد الإلكتروني';
+            return;
+        }
+        const users = loadUsers();
+        const user = users.find(u => u.email === email);
+        if (!user) {
+            errorDiv.style.display = 'block';
+            errorDiv.innerText = '❌ البريد الإلكتروني غير مسجل في الموقع';
+            return;
+        }
+        errorDiv.style.display = 'none';
+        errorDiv.innerText = '';
+        const res = resetPassword(email);
+        showToast(res.msg, !res.success);
+        if (res.success) {
+            setTimeout(() => openAuthModal('login'), 2000);
+        }
+    };
+
+    document.getElementById('settingsBtnUser').addEventListener('click', function() {
+        if (currentSession.verified && !currentSession.isOwner) {
+            openSettings(currentSession.email);
+        } else {
+            showToast('يجب تسجيل الدخول كمستخدم', true);
+        }
+    });
+    document.getElementById('settingsBtnAdmin').addEventListener('click', function() {
+        if (currentSession.isOwner) {
+            openSettings(OWNER_EMAIL);
+        } else {
+            showToast('غير مصرح', true);
+        }
+    });
+
+    document.getElementById('notificationBtnUser').addEventListener('click', function() {
+        if (!currentSession.verified) { openAuthModal('login'); return; }
+        showMessagesPopup();
+    });
+
+    document.getElementById('notificationBtnAdmin').addEventListener('click', function() {
+        if (!currentSession.isOwner) { openAuthModal('login'); return; }
+        document.getElementById('adminPanel').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    // ---------- إدارة التعليقات ----------
+    function loadTestimonials() {
+        let testimonials = JSON.parse(localStorage.getItem('asrar_testimonials') || '[]');
+        const container = document.getElementById('testimonialsList');
+        container.innerHTML = '';
+        if (testimonials.length === 0) {
+            container.innerHTML = '<p style="text-align:center; color:#7f8c8d;">لا توجد آراء حتى الآن. كن أول من يشاركنا رأيه!</p>';
+            return;
+        }
+        testimonials.slice().reverse().forEach((item, index) => {
+            const div = document.createElement('div');
+            div.className = 'testimonial-item';
+            let starsHtml = '';
+            for (let i=1; i<=5; i++) starsHtml += (i <= item.rating) ? '★' : '☆';
+            div.innerHTML = `
+                <div class="rating">${starsHtml}</div>
+                <div class="testimonial-text">${item.text}</div>
+                <div class="testimonial-meta"><strong>${item.name}</strong> ${item.email ? `· ${item.email}` : ''} · ${new Date(item.date).toLocaleDateString('ar-SA')}</div>
+                <button class="delete-testimonial" data-index="${index}">🗑 حذف</button>
+            `;
+            container.appendChild(div);
+        });
+        document.querySelectorAll('.delete-testimonial').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const idx = this.getAttribute('data-index');
+                let all = JSON.parse(localStorage.getItem('asrar_testimonials') || '[]');
+                const realIndex = all.length - 1 - parseInt(idx);
+                if (realIndex >= 0 && realIndex < all.length) {
+                    all.splice(realIndex, 1);
+                    localStorage.setItem('asrar_testimonials', JSON.stringify(all));
+                    loadTestimonials();
+                    showToast('تم حذف التعليق');
+                }
+            });
+        });
+    }
+
+    document.getElementById('addTestimonialBtn').addEventListener('click', function() {
+        const name = document.getElementById('testimonialName').value.trim();
+        const email = document.getElementById('testimonialEmail').value.trim();
+        const rating = parseInt(document.getElementById('testimonialRating').value);
+        const text = document.getElementById('testimonialText').value.trim();
+        if (!name || !text || rating === 0) { showToast('يرجى ملء الاسم والتقييم والتعليق', true); return; }
+        const newTestimonial = { name, email: email || '', rating, text, date: new Date().toISOString() };
+        let all = JSON.parse(localStorage.getItem('asrar_testimonials') || '[]');
+        all.push(newTestimonial);
+        localStorage.setItem('asrar_testimonials', JSON.stringify(all));
+        document.getElementById('testimonialName').value = '';
+        document.getElementById('testimonialEmail').value = '';
+        document.getElementById('testimonialText').value = '';
+        document.getElementById('testimonialRating').value = '0';
+        document.querySelectorAll('#ratingStars span').forEach(s => s.classList.remove('active'));
+        loadTestimonials();
+        showToast('✅ تم إضافة رأيك، شكراً لك!');
+    });
+
+    const stars = document.querySelectorAll('#ratingStars span');
+    const ratingInput = document.getElementById('testimonialRating');
+    stars.forEach(star => {
+        star.addEventListener('click', function() {
+            const value = parseInt(this.dataset.value);
+            ratingInput.value = value;
+            stars.forEach(s => s.classList.toggle('active', parseInt(s.dataset.value) <= value));
+        });
+        star.addEventListener('mouseenter', function() {
+            const value = parseInt(this.dataset.value);
+            stars.forEach(s => s.style.color = (parseInt(s.dataset.value) <= value) ? '#f1c40f' : '#d5dbe0');
+        });
+        star.addEventListener('mouseleave', function() {
+            const selected = parseInt(ratingInput.value);
+            stars.forEach(s => { s.style.color = ''; s.classList.toggle('active', parseInt(s.dataset.value) <= selected); });
+        });
+    });
+
+    // ---------- تهيئة أيقونات إظهار/إخفاء كلمة المرور للحقول الثابتة ----------
+    setupToggle('loginPassword', 'toggleLoginPwd');
+    setupToggle('regPassword', 'toggleRegPwd');
+    setupToggle('regConfirm', 'toggleRegConfirmPwd');
+
+    // ---------- بدء التطبيق ----------
+    updateUI();
+    loadTestimonials();
+
+    setInterval(() => {
+        if (currentSession.verified) {
+            updateNotificationBadges();
+            if (!currentSession.isOwner && !document.getElementById('dashboardPanel').classList.contains('hidden')) {
+                renderUserRequests();
+            }
+            if (currentSession.isOwner && !document.getElementById('adminPanel').classList.contains('hidden')) {
+                renderAdminRequests();
+                renderUsersTable();
+                renderAdminSentMessages();
+            }
+        }
+    }, 10000);
+</script>
+
+<footer class="no-print" style="background:#0c2d3a; color:#e9f0f5; border-radius:48px 48px 0 0; margin-top:80px; padding:40px 0 30px;">
+    <div class="container">
+        <div style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:30px;">
+            <div><i class="fas fa-map-marker-alt"></i> <strong>المدينة المنورة، شارع عبدالمجيد بن عبدالعزيز، حي بني عبدالاشهل</strong></div>
+            <div><i class="fas fa-phone-alt"></i> 0532515480 &nbsp;|&nbsp; <i class="fas fa-envelope"></i> mohamedsiddigkaps30@gmail.com</div>
+        </div>
+        <div class="copyright" style="text-align:center; margin-top:30px;">© 2025 مكتب أسرار البيان | نظام متكامل لإدارة الخدمات الإلكترونية</div>
+    </div>
+</footer>
+</body>
+</html>
